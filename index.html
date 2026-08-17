@@ -43,6 +43,24 @@ section.item > h2 { font-size: 24px; font-weight: normal; }
 .tag.rejected { color: #999; border-color: #999; text-decoration: line-through; }
 footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
          font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #777; }
+.toolbar { font-family: Arial, Helvetica, sans-serif; font-size: 11px; text-transform: uppercase;
+           letter-spacing: 1px; color: #555; padding: 10px 0; border-bottom: 1px solid #ddd;
+           display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.toolbar .lbl { margin-right: 2px; }
+.toolbar button { font: 11px Arial, Helvetica, sans-serif; text-transform: uppercase;
+                  letter-spacing: 1px; background: #fff; color: #555; border: 1px solid #ccc;
+                  padding: 4px 11px; cursor: pointer; }
+.toolbar button.on { background: #111; color: #fff; border-color: #111; }
+.toolbar .spacer { flex: 1; }
+.actions { display: flex; gap: 8px; margin-top: 10px; }
+.actions button { font: 11px Arial, Helvetica, sans-serif; text-transform: uppercase;
+                  letter-spacing: 1px; background: #fff; color: #111; border: 1px solid #111;
+                  padding: 3px 10px; cursor: pointer; }
+.actions button.like.on { background: #111; color: #fff; }
+.actions button.del { border-color: #999; color: #999; }
+.actions button.del:hover { border-color: #111; color: #111; }
+.card.gone { display: none; }
+body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; }
 @media (max-width: 640px) {
   .card { flex-direction: column; }
   .card .photo { width: 100%; height: 200px; }
@@ -56,14 +74,22 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
   <h1>The Lost House</h1>
   <p class="sub">Register of antique replacements sought for a neoclassical home lost to fire</p>
 </header>
-<p class="summary">5 items sought &nbsp;·&nbsp; 10 listings on file &nbsp;·&nbsp; updated 17 Aug 2026, 00:30</p>
+<p class="summary">7 items sought &nbsp;·&nbsp; 10 listings on file &nbsp;·&nbsp; updated 17 Aug 2026, 10:17</p>
+<div class="toolbar">
+  <span class="lbl">Sort:</span>
+  <button type="button" data-sort="relevant">Most relevant</button>
+  <button type="button" data-sort="newest">Newest</button>
+  <button type="button" data-sort="liked">Liked first</button>
+  <span class="spacer"></span>
+  <button type="button" id="toggle-hidden">Show removed (<span id="hidden-count">0</span>)</button>
+</div>
 
 <section class="item">
   <h2>Stavros Neonakis — any piece</h2>
   <p class="item-meta">Greek neoclassical / ancient Greek revival &nbsp;·&nbsp; 1970s-2000s &nbsp;·&nbsp; any &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Any furniture by Stavros Neonakis of Athens (klismos chairs, klismos stools, diphros stools, tripod tables, bronze fixtures). Maker labels may read &quot;ΣΤΑΥΡΟΣ ΝΕΟΝΑΚΗΣ&quot; or &quot;Neonakis Athens&quot;.</p>
 
-  <article class="card">
+  <article class="card" data-key="https://www.car.gr/xyma/view/54455995-trapezaria-neonaki-dekaetias-1980-masif-ksylo-stroggylo-trapezi-me-2-epektaseis-kai-6-karekles" data-rel="5" data-found="1786893000">
     <div class="photo"><img src="https://static.car.gr/54455995_0_b.jpg" alt=""></div>
     <div class="body">
       <h3><a href="https://www.car.gr/xyma/view/54455995-trapezaria-neonaki-dekaetias-1980-masif-ksylo-stroggylo-trapezi-me-2-epektaseis-kai-6-karekles" target="_blank" rel="noopener">Τραπεζαρία Νεονάκη 1985 — μασίφ ελληνική καρυδιά, στρογγυλό τραπέζι με 2 επεκτάσεις και 6 σκαλιστές καρέκλες</a><span class="tag candidate">Candidate</span></h3>
@@ -71,11 +97,15 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
       <p class="meta">Car.gr &nbsp;·&nbsp; Anixi, Attica 14569 (private seller &quot;Ματθαιος&quot;) &nbsp;·&nbsp; Used, well kept</p>
       <p class="notes">Confirmed maker field &quot;Νεονάκη&quot;, built 1985. Round table converts to oval via 2 extensions; each chair hand-carved from a single piece of Greek walnut. Listing last updated ~1 month ago, still active.
 </p>
+      <div class="actions">
+        <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="del">&#215; Remove</button>
+      </div>
       <p class="dates">Found 16 Aug 2026, 17:10</p>
     </div>
   </article>
 
-  <article class="card">
+  <article class="card" data-key="https://vendora.gr/items/oj8z864/vivliothiki-stavros-neonakis-collection-san-kenourgio-210x200-ek.html" data-rel="5" data-found="1786893000">
     <div class="photo"><img src="https://bcdn.vendora.gr/0/65/66/6566083c09979bb72b82eddcd72b2f865d62f4ec.jpg" alt=""></div>
     <div class="body">
       <h3><a href="https://vendora.gr/items/oj8z864/vivliothiki-stavros-neonakis-collection-san-kenourgio-210x200-ek.html" target="_blank" rel="noopener">Βιβλιοθήκη Stavros Neonakis Collection, 210 × 200 cm — σαν καινούργιο</a><span class="tag candidate">Candidate</span></h3>
@@ -83,11 +113,15 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
       <p class="meta">Vendora &nbsp;·&nbsp; Chalandri, Athens (pickup by meeting only) &nbsp;·&nbsp; Like new</p>
       <p class="notes">Seller explicitly names it &quot;Stavros Neonakis Collection&quot; (#neonakis tag). Posted ~1 month ago, still active. Large piece — pickup from Chalandri only.
 </p>
+      <div class="actions">
+        <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="del">&#215; Remove</button>
+      </div>
       <p class="dates">Found 16 Aug 2026, 17:10</p>
     </div>
   </article>
 
-  <article class="card">
+  <article class="card" data-key="https://vendora.gr/items/0yo57yw/grafio-trapezi-konsola-me-dio-sirtaria-san-kenourgio-chiropiito-1980.html" data-rel="4" data-found="1786893000">
     <div class="photo"><img src="https://bcdn.vendora.gr/0/09/52/0952a67d1a2168682726a5db32175bc16ace96b0.jpg?class=xl" alt=""></div>
     <div class="body">
       <h3><a href="https://vendora.gr/items/0yo57yw/grafio-trapezi-konsola-me-dio-sirtaria-san-kenourgio-chiropiito-1980.html" target="_blank" rel="noopener">Γραφείο/τραπέζι/κονσόλα με δύο συρτάρια, χειροποίητο 1980s, επιπλοποιός Νεονάκης</a><span class="tag candidate">Candidate</span></h3>
@@ -95,6 +129,10 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
       <p class="meta">Vendora &nbsp;·&nbsp; Peania, Attica 19002 &nbsp;·&nbsp; Like new</p>
       <p class="notes">Description attributes it to &quot;επιπλοποιός Νεονάκης&quot; — solid wood and veneer, classic style. Cheapest way to own a piece from the workshop; still active.
 </p>
+      <div class="actions">
+        <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="del">&#215; Remove</button>
+      </div>
       <p class="dates">Found 16 Aug 2026, 17:10</p>
     </div>
   </article>
@@ -104,7 +142,7 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
   <p class="item-meta">Greek classical / neoclassical, carved solid walnut &nbsp;·&nbsp; 1950s-1980s &nbsp;·&nbsp; any &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Pieces matching the Neonakis era and style when no attributed piece is available: Saridis of Athens (T.H. Robsjohn-Gibbings designs), and quality unattributed handmade carved walnut dining sets and case furniture from Greek workshops.</p>
 
-  <article class="card">
+  <article class="card" data-key="https://www.1stdibs.com/furniture/seating/chairs/early-th-robsjohn-gibbings-klismos-chair-saridis-athens/id-f_1112538/" data-rel="4" data-found="1786894800">
     <div class="photo"><img src="https://a.1stdibscdn.com/archivesE/upload/9314/15_14/1112538/1112538_l.jpg" alt=""></div>
     <div class="body">
       <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/early-th-robsjohn-gibbings-klismos-chair-saridis-athens/id-f_1112538/" target="_blank" rel="noopener">Early T.H. Robsjohn-Gibbings klismos chair for Saridis of Athens, c. 1960 — walnut &amp; leather</a><span class="tag candidate">Candidate</span></h3>
@@ -112,22 +150,30 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
       <p class="meta">1stDibs &nbsp;·&nbsp; Dronten, Netherlands &nbsp;·&nbsp; Excellent, all original, maker&#x27;s metal label</p>
       <p class="notes">The ur-piece of the school Neonakis worked in. Provenance: Royal Dutch Shell executive office. Seller offers museum-quality crating and worldwide shipping.
 </p>
+      <div class="actions">
+        <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="del">&#215; Remove</button>
+      </div>
       <p class="dates">Found 16 Aug 2026, 17:40</p>
     </div>
   </article>
 
-  <article class="card">
+  <article class="card" data-key="https://www.1stdibs.com/furniture/seating/dining-room-chairs/th-robsjohn-gibbings-saridis-klismos-chairs-walnut-leather-thongs/id-f_25702382" data-rel="4" data-found="1786894800">
     <div class="photo"><img src="https://a.1stdibscdn.com/th-robsjohn-gibbings-for-saridis-klismos-chairs-in-walnut-with-leather-thongs-for-sale/f_8202/f_257023821659398884348/f_25702382_1659398884607_bg_processed.jpg?width=768" alt=""></div>
     <div class="body">
       <h3><a href="https://www.1stdibs.com/furniture/seating/dining-room-chairs/th-robsjohn-gibbings-saridis-klismos-chairs-walnut-leather-thongs/id-f_25702382" target="_blank" rel="noopener">T.H. Robsjohn-Gibbings for Saridis klismos chairs, walnut &amp; leather thongs, c. 1960s</a><span class="tag candidate">Candidate</span></h3>
       <p class="price">on request <small>inquire with seller</small></p>
       <p class="meta">1stDibs &nbsp;·&nbsp; St. Louis, MO, USA &nbsp;·&nbsp; Good, refinished, light touch-ups</p>
       <p class="notes">Multiple chairs (dining set). Same Saridis production as the single Dronten chair.</p>
+      <div class="actions">
+        <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="del">&#215; Remove</button>
+      </div>
       <p class="dates">Found 16 Aug 2026, 17:40</p>
     </div>
   </article>
 
-  <article class="card">
+  <article class="card" data-key="https://vendora.gr/items/0m995k/chiropiiti-skalisti-trapezaria-karidias-san-kenourgia-me-6-karekles-ke-gialini-epifania.html" data-rel="3" data-found="1786894800">
     <div class="photo"><img src="https://bcdn.vendora.gr/0/b3/5e/b35e8130bd294fe68073d68657cbd36f0805bad5.jpg?class=xl" alt=""></div>
     <div class="body">
       <h3><a href="https://vendora.gr/items/0m995k/chiropiiti-skalisti-trapezaria-karidias-san-kenourgia-me-6-karekles-ke-gialini-epifania.html" target="_blank" rel="noopener">Χειροποίητη σκαλιστή τραπεζαρία καρυδιάς με 6 καρέκλες και γυάλινη επιφάνεια — σαν καινούργια</a><span class="tag candidate">Candidate</span></h3>
@@ -135,11 +181,15 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
       <p class="meta">Vendora &nbsp;·&nbsp; Thessaloniki 54250 &nbsp;·&nbsp; Like new</p>
       <p class="notes">Hand-carved classic walnut set, 1.57 × 0.97 m table with protective glass top, seller pitches it for &quot;classical or neoclassical interiors&quot;. Unattributed maker.
 </p>
+      <div class="actions">
+        <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="del">&#215; Remove</button>
+      </div>
       <p class="dates">Found 16 Aug 2026, 17:40</p>
     </div>
   </article>
 
-  <article class="card">
+  <article class="card" data-key="https://vendora.gr/items/3nmdpk5/trapezaria-metachirismeni-elliniki-karidia-1958-me-exi-karekles-ke-skalisma.html" data-rel="3" data-found="1786894800">
     <div class="photo"><img src="https://bcdn.vendora.gr/0/ea/99/ea9918d3720d657bb158212a692d6fdf6f1be062.jpg" alt=""></div>
     <div class="body">
       <h3><a href="https://vendora.gr/items/3nmdpk5/trapezaria-metachirismeni-elliniki-karidia-1958-me-exi-karekles-ke-skalisma.html" target="_blank" rel="noopener">Τραπεζαρία ελληνική καρυδιά 1958, έξι καρέκλες, σκάλισμα, πόδια-νύχια αετού</a><span class="tag candidate">Candidate</span></h3>
@@ -147,6 +197,10 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
       <p class="meta">Vendora &nbsp;·&nbsp; Patra 26223 &nbsp;·&nbsp; Used, chairs&#x27; fabric undamaged</p>
       <p class="notes">1958 hand-carved Greek walnut set with eagle-claw feet and hidden drawers in both short table sides. Older generation than Neonakis but the same tradition.
 </p>
+      <div class="actions">
+        <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="del">&#215; Remove</button>
+      </div>
       <p class="dates">Found 16 Aug 2026, 17:40</p>
     </div>
   </article>
@@ -156,7 +210,7 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
   <p class="item-meta">Greek classical, klismos / gondola back, after ancient Greek prototypes &nbsp;·&nbsp; 1980s-1990s, made by Stavros Neonakis, Athens (per owner) &nbsp;·&nbsp; living room &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Side chairs with sabre legs, rounded scroll/gondola backs and pale cream seats, as seen throughout the living room in the magazine photos. At least 3-4 visible.</p>
 
-  <article class="card">
+  <article class="card" data-key="https://www.1stdibs.com/furniture/seating/chairs/th-robsjohn-gibbings-klismos-chairs-saridis-athens/id-f_3815742/" data-rel="5" data-found="1786959000">
     <div class="photo"><img src="https://a.1stdibscdn.com/archivesE/upload/1121189/f_3815742/3815742_master.jpg?width=768" alt=""></div>
     <div class="body">
       <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/th-robsjohn-gibbings-klismos-chairs-saridis-athens/id-f_3815742/" target="_blank" rel="noopener">T.H. Robsjohn-Gibbings klismos chairs by Saridis of Athens, 1960s — walnut, leather woven seats (3 available)</a><span class="tag candidate">Candidate</span></h3>
@@ -164,22 +218,30 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
       <p class="meta">1stDibs &nbsp;·&nbsp; Riverdale, NY, USA</p>
       <p class="notes">Three Greek-made walnut klismos chairs — the closest available match to the living-room side chairs in the magazine photos.
 </p>
+      <div class="actions">
+        <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="del">&#215; Remove</button>
+      </div>
       <p class="dates">Found 17 Aug 2026, 11:30</p>
     </div>
   </article>
 
-  <article class="card">
+  <article class="card" data-key="https://www.1stdibs.com/furniture/seating/chairs/robsjohn-gibbings-klismos-side-chairs/id-f_78537/" data-rel="4" data-found="1786959000">
     <div class="photo"><img src="https://a.1stdibscdn.com/archives/upload/1stdibs/011306_ZH/JFChenLA/05/xDSC_0190_0191.jpg?width=768" alt=""></div>
     <div class="body">
       <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/robsjohn-gibbings-klismos-side-chairs/id-f_78537/" target="_blank" rel="noopener">Robsjohn-Gibbings klismos side chairs — walnut and muslin, made in Greece</a><span class="tag candidate">Candidate</span></h3>
       <p class="price">on request <small>inquire with seller</small></p>
       <p class="meta">1stDibs &nbsp;·&nbsp; Los Angeles, CA, USA</p>
       <p class="notes">Greek production, pale upholstered seats like the photo chairs.</p>
+      <div class="actions">
+        <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="del">&#215; Remove</button>
+      </div>
       <p class="dates">Found 17 Aug 2026, 11:30</p>
     </div>
   </article>
 
-  <article class="card">
+  <article class="card" data-key="https://www.pamono.eu/walnut-wood-white-leather-saber-legged-klismos-dining-chair-from-pescetta" data-rel="2" data-found="1786959000">
     <div class="photo"><img src="https://cdn20.pamono.com/p/s/2/1/2139601_9m9ayc1bbs/walnut-wood-white-leather-saber-legged-klismos-dining-chair-from-pescetta.jpg" alt=""></div>
     <div class="body">
       <h3><a href="https://www.pamono.eu/walnut-wood-white-leather-saber-legged-klismos-dining-chair-from-pescetta" target="_blank" rel="noopener">Pescetta klismos dining chair — walnut, sabre legs, white leather seat (new, customizable)</a><span class="tag candidate">Candidate</span></h3>
@@ -187,6 +249,10 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
       <p class="meta">Pamono &nbsp;·&nbsp; Italy (made to order) &nbsp;·&nbsp; New</p>
       <p class="notes">Modern replica route — customizable wood finish and seat, so a full matching set to the photo chairs is possible. accept_replica is true for this item.
 </p>
+      <div class="actions">
+        <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="del">&#215; Remove</button>
+      </div>
       <p class="dates">Found 17 Aug 2026, 11:30</p>
     </div>
   </article>
@@ -198,12 +264,113 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
 <p class="none">No listings found yet — searches running.</p>
 </section>
 <section class="item">
+  <h2>Giant green floral carpet — Queen Frederica school</h2>
+  <p class="item-meta">Greek handwoven, allover floral field (&quot;a green meadow full of flowers&quot;) &nbsp;·&nbsp; mid-20th century, Royal Welfare Fund carpet school, NW Greece (Epirus) &nbsp;·&nbsp; living room &nbsp;·&nbsp; status: searching</p>
+  <p class="item-desc">Gigantic room-size carpet, green ground densely covered with flowers, covering nearly the whole living-room floor in the magazine photos (print colour cast makes it look warm/red, but per the family it is green). Made at the crafts school founded by Queen Frederica in Northwestern Greece; the family also used it in a previous large house. School designs, not commercial patterns.</p>
+<p class="none">No listings found yet — searches running.</p>
+</section>
+<section class="item">
+  <h2>Queen Frederica school carpets — any</h2>
+  <p class="item-meta">Greek handwoven, Royal Welfare Fund workshop designs &nbsp;·&nbsp; 1950s-1970s, Northwestern Greece (Epirus) &nbsp;·&nbsp; any &nbsp;·&nbsp; status: searching</p>
+  <p class="item-desc">Standing search for any carpet from the Queen Frederica / Royal Welfare Fund (Βασιλική Πρόνοια) craft schools of Northwestern Greece — the family had several, all woven with their own sheep&#x27;s wool to the schools&#x27; own designs.</p>
+<p class="none">No listings found yet — searches running.</p>
+</section>
+<section class="item">
   <h2>Round two-tier coffee table, hoof feet — Neonakis</h2>
   <p class="item-meta">neoclassical, after ancient Greek prototypes &nbsp;·&nbsp; 1980s-1990s, made by Stavros Neonakis, Athens (per owner) &nbsp;·&nbsp; living room &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Large round coffee table with two levels (wooden lower shelf, glass top) and animal/hoof feet, centre of the living room in the magazine photos.</p>
 <p class="none">No listings found yet — searches running.</p>
 </section>
-<footer>Listings link to the original marketplaces; prices and availability change there, not here.</footer>
+<footer>Listings link to the original marketplaces; prices and availability change there, not here.
+Likes and removals are saved in this browser only.</footer>
 </div>
+<script>
+(function () {
+  'use strict';
+  function load(key, fallback) {
+    try { var v = JSON.parse(localStorage.getItem(key)); return v === null ? fallback : v; }
+    catch (e) { return fallback; }
+  }
+  function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {} }
+
+  var likes = new Set(load('lhf-likes', []));
+  var removed = new Set(load('lhf-removed', []));
+  var sortMode = load('lhf-sort', 'relevant');
+  var showRemoved = false;
+
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card[data-key]'));
+
+  function renderCard(card) {
+    var key = card.getAttribute('data-key');
+    var likeBtn = card.querySelector('.actions .like');
+    var delBtn = card.querySelector('.actions .del');
+    var liked = likes.has(key);
+    likeBtn.classList.toggle('on', liked);
+    likeBtn.innerHTML = liked ? '&#9829; Liked' : '&#9825; Like';
+    var gone = removed.has(key);
+    card.classList.toggle('gone', gone);
+    delBtn.innerHTML = gone ? '&#8634; Restore' : '&#215; Remove';
+  }
+
+  function sortKey(card) {
+    var key = card.getAttribute('data-key');
+    var rel = parseInt(card.getAttribute('data-rel'), 10) || 0;
+    var found = parseInt(card.getAttribute('data-found'), 10) || 0;
+    if (sortMode === 'newest') return [found, rel];
+    if (sortMode === 'liked') return [likes.has(key) ? 1 : 0, rel, found];
+    return [rel, found];
+  }
+
+  function apply() {
+    cards.forEach(renderCard);
+    document.querySelectorAll('section.item').forEach(function (section) {
+      var sectionCards = Array.prototype.slice.call(section.querySelectorAll('.card[data-key]'));
+      sectionCards
+        .map(function (c) { return [sortKey(c), c]; })
+        .sort(function (a, b) {
+          for (var i = 0; i < a[0].length; i++) {
+            if (a[0][i] !== b[0][i]) return b[0][i] - a[0][i];
+          }
+          return 0;
+        })
+        .forEach(function (pair) { section.appendChild(pair[1]); });
+    });
+    document.querySelectorAll('.toolbar [data-sort]').forEach(function (btn) {
+      btn.classList.toggle('on', btn.getAttribute('data-sort') === sortMode);
+    });
+    document.getElementById('hidden-count').textContent = removed.size;
+    document.getElementById('toggle-hidden').classList.toggle('on', showRemoved);
+    document.body.classList.toggle('show-hidden', showRemoved);
+  }
+
+  cards.forEach(function (card) {
+    var key = card.getAttribute('data-key');
+    card.querySelector('.actions .like').addEventListener('click', function () {
+      likes.has(key) ? likes.delete(key) : likes.add(key);
+      save('lhf-likes', Array.from(likes));
+      apply();
+    });
+    card.querySelector('.actions .del').addEventListener('click', function () {
+      removed.has(key) ? removed.delete(key) : removed.add(key);
+      save('lhf-removed', Array.from(removed));
+      apply();
+    });
+  });
+
+  document.querySelectorAll('.toolbar [data-sort]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      sortMode = btn.getAttribute('data-sort');
+      save('lhf-sort', sortMode);
+      apply();
+    });
+  });
+  document.getElementById('toggle-hidden').addEventListener('click', function () {
+    showRemoved = !showRemoved;
+    apply();
+  });
+
+  apply();
+})();
+</script>
 </body>
 </html>
