@@ -57,6 +57,10 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
                   letter-spacing: 1px; background: #fff; color: #111; border: 1px solid #111;
                   padding: 3px 10px; cursor: pointer; }
 .actions button.like.on { background: #111; color: #fff; }
+.actions button.buy.on { background: #111; color: #fff; }
+.actions button.prog.on { background: #555; color: #fff; border-color: #555; }
+.tag.mine-bought { background: #111; color: #fff; }
+.tag.mine-inproc { background: #555; color: #fff; border-color: #555; }
 .actions button.del { border-color: #999; color: #999; }
 .actions button.del:hover { border-color: #111; color: #111; }
 .card.gone { display: none; }
@@ -74,7 +78,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <h1>The Lost House</h1>
   <p class="sub">Register of antique replacements sought for a neoclassical home lost to fire</p>
 </header>
-<p class="summary">21 items sought &nbsp;·&nbsp; 65 listings on file &nbsp;·&nbsp; updated 30 Aug 2026, 20:17</p>
+<p class="summary">21 items sought &nbsp;·&nbsp; 65 listings on file &nbsp;·&nbsp; updated 30 Aug 2026, 21:19</p>
 <div class="toolbar">
   <span class="lbl">Sort:</span>
   <button type="button" data-sort="relevant">Most relevant</button>
@@ -92,13 +96,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.car.gr/xyma/view/54455995-trapezaria-neonaki-dekaetias-1980-masif-ksylo-stroggylo-trapezi-me-2-epektaseis-kai-6-karekles" data-rel="5" data-found="1786893000" data-listed="1783461600">
     <div class="photo"><img src="images/a54d57969eca.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.car.gr/xyma/view/54455995-trapezaria-neonaki-dekaetias-1980-masif-ksylo-stroggylo-trapezi-me-2-epektaseis-kai-6-karekles" target="_blank" rel="noopener">Τραπεζαρία Νεονάκη 1985 — μασίφ ελληνική καρυδιά, στρογγυλό τραπέζι με 2 επεκτάσεις και 6 σκαλιστές καρέκλες</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.car.gr/xyma/view/54455995-trapezaria-neonaki-dekaetias-1980-masif-ksylo-stroggylo-trapezi-me-2-epektaseis-kai-6-karekles" target="_blank" rel="noopener">Τραπεζαρία Νεονάκη 1985 — μασίφ ελληνική καρυδιά, στρογγυλό τραπέζι με 2 επεκτάσεις και 6 σκαλιστές καρέκλες</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 1.850 <small>asking price</small></p>
       <p class="meta">Car.gr &nbsp;·&nbsp; Anixi, Attica 14569 (private seller &quot;Ματθαιος&quot;) &nbsp;·&nbsp; Used, well kept</p>
       <p class="notes">Confirmed maker field &quot;Νεονάκη&quot;, built 1985. Round table converts to oval via 2 extensions; each chair hand-carved from a single piece of Greek walnut. Listing last updated ~1 month ago, still active.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="last renewed on Car.gr; original post date not shown">Listed 8 Jul 2026*</span> &nbsp;·&nbsp; Found 16 Aug 2026, 17:10</p>
@@ -108,13 +114,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/oj8z864/vivliothiki-stavros-neonakis-collection-san-kenourgio-210x200-ek.html" data-rel="5" data-found="1786893000" data-listed="1784239200">
     <div class="photo"><img src="images/5456229a2a4e.webp" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/oj8z864/vivliothiki-stavros-neonakis-collection-san-kenourgio-210x200-ek.html" target="_blank" rel="noopener">Βιβλιοθήκη Stavros Neonakis Collection, 210 × 200 cm — σαν καινούργιο</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/oj8z864/vivliothiki-stavros-neonakis-collection-san-kenourgio-210x200-ek.html" target="_blank" rel="noopener">Βιβλιοθήκη Stavros Neonakis Collection, 210 × 200 cm — σαν καινούργιο</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 799 <small>asking price</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Chalandri, Athens (pickup by meeting only) &nbsp;·&nbsp; Like new</p>
       <p class="notes">Seller explicitly names it &quot;Stavros Neonakis Collection&quot; (#neonakis tag). Posted ~1 month ago, still active. Large piece — pickup from Chalandri only.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;published 1 month ago&quot; — approximate">Listed 17 Jul 2026*</span> &nbsp;·&nbsp; Found 16 Aug 2026, 17:10</p>
@@ -124,13 +132,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/0yo57yw/grafio-trapezi-konsola-me-dio-sirtaria-san-kenourgio-chiropiito-1980.html" data-rel="4" data-found="1786893000" data-listed="1784239200">
     <div class="photo"><img src="images/ad27d28fef14.webp" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/0yo57yw/grafio-trapezi-konsola-me-dio-sirtaria-san-kenourgio-chiropiito-1980.html" target="_blank" rel="noopener">Γραφείο/τραπέζι/κονσόλα με δύο συρτάρια, χειροποίητο 1980s, επιπλοποιός Νεονάκης</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/0yo57yw/grafio-trapezi-konsola-me-dio-sirtaria-san-kenourgio-chiropiito-1980.html" target="_blank" rel="noopener">Γραφείο/τραπέζι/κονσόλα με δύο συρτάρια, χειροποίητο 1980s, επιπλοποιός Νεονάκης</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 170 <small>asking price</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Peania, Attica 19002 &nbsp;·&nbsp; Like new</p>
       <p class="notes">Description attributes it to &quot;επιπλοποιός Νεονάκης&quot; — solid wood and veneer, classic style. Cheapest way to own a piece from the workshop; still active.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;published over 1 month ago&quot; — on or before this date">Listed 17 Jul 2026*</span> &nbsp;·&nbsp; Found 16 Aug 2026, 17:10</p>
@@ -145,12 +155,14 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.1stdibs.com/furniture/seating/stools/early-th-robsjohn-gibbings-klismos-stool-saridis-athens/id-f_47294722/" data-rel="3" data-found="1787004000" data-listed="0">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://www.1stdibs.com/furniture/seating/stools/early-th-robsjohn-gibbings-klismos-stool-saridis-athens/id-f_47294722/" target="_blank" rel="noopener">Early T.H. Robsjohn-Gibbings klismos stool for Saridis, c. 1961</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.1stdibs.com/furniture/seating/stools/early-th-robsjohn-gibbings-klismos-stool-saridis-athens/id-f_47294722/" target="_blank" rel="noopener">Early T.H. Robsjohn-Gibbings klismos stool for Saridis, c. 1961</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">$ 10,450</p>
       <p class="meta">1stDibs</p>
       <p class="notes">Same stool form as the Neonakis-school pieces; a sold Neonakis stool comp ran ~$10,900.</p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 18 Aug 2026, 00:00</p>
@@ -160,12 +172,14 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.chairish.com/product/21390542/" data-rel="3" data-found="1787004000" data-listed="0">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://www.chairish.com/product/21390542/" target="_blank" rel="noopener">T.H. Robsjohn-Gibbings Diphros Okladias folding stool No. 24, Saridis production</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.chairish.com/product/21390542/" target="_blank" rel="noopener">T.H. Robsjohn-Gibbings Diphros Okladias folding stool No. 24, Saridis production</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">$ 15,000</p>
       <p class="meta">Chairish</p>
       <p class="notes">The folding diphros form from the same Saridis line.</p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 18 Aug 2026, 00:00</p>
@@ -175,12 +189,14 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://tftmmelrose.com/product/klismos-chair-designed-t-h-robsjohn-gibbings-1961-saridis-athens/" data-rel="3" data-found="1787004000" data-listed="0">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://tftmmelrose.com/product/klismos-chair-designed-t-h-robsjohn-gibbings-1961-saridis-athens/" target="_blank" rel="noopener">Klismos chair, 1961 first production, Saridis of Athens — original with tag</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://tftmmelrose.com/product/klismos-chair-designed-t-h-robsjohn-gibbings-1961-saridis-athens/" target="_blank" rel="noopener">Klismos chair, 1961 first production, Saridis of Athens — original with tag</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">on request</p>
       <p class="meta">TFTM Melrose (LA dealer) &nbsp;·&nbsp; Los Angeles &nbsp;·&nbsp; Completely original, tagged</p>
       <p class="notes">First-production 1961 example at a dealer outside the usual marketplaces.</p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 18 Aug 2026, 00:00</p>
@@ -190,13 +206,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.car.gr/xyma/view/342242309-saridis-4-karekles-trapezarias" data-rel="4" data-found="1787004000" data-listed="1786572000">
     <div class="photo"><img src="images/bcbc4344eba9.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.car.gr/xyma/view/342242309-saridis-4-karekles-trapezarias" target="_blank" rel="noopener">ΣΑΡΙΔΗΣ — 4 καρέκλες τραπεζαρίας 1950-1960, υπογραφή γνησιότητας, κρεμ σενίλ</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.car.gr/xyma/view/342242309-saridis-4-karekles-trapezarias" target="_blank" rel="noopener">ΣΑΡΙΔΗΣ — 4 καρέκλες τραπεζαρίας 1950-1960, υπογραφή γνησιότητας, κρεμ σενίλ</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 800</p>
       <p class="meta">Car.gr &nbsp;·&nbsp; Greece &nbsp;·&nbsp; Need reupholstery and wood refresh</p>
       <p class="notes">Best authenticated Saridis find in Greece: authenticity inscription with Saridis signature and handwritten serial 45208, bronze nails, cream/beige chenille seats — the Robsjohn-Gibbings years. Project condition at a fraction of the US dealer prices.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Car.gr last-modified date; original post date not shown">Listed 13 Aug 2026*</span> &nbsp;·&nbsp; Found 18 Aug 2026, 00:00</p>
@@ -206,13 +224,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.xe.gr/epipla/karekles-salonioy-trapezarias|ad-844322559.html" data-rel="3" data-found="1787004000" data-listed="1786572000">
     <div class="photo"><img src="images/8c64b1d261c5.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.xe.gr/epipla/karekles-salonioy-trapezarias|ad-844322559.html" target="_blank" rel="noopener">4 καρέκλες Σαρίδη, κατασκευή 1961 — προς ανακαίνιση</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.xe.gr/epipla/karekles-salonioy-trapezarias|ad-844322559.html" target="_blank" rel="noopener">4 καρέκλες Σαρίδη, κατασκευή 1961 — προς ανακαίνιση</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 320 <small>negotiable</small></p>
       <p class="meta">xe.gr &nbsp;·&nbsp; Kypseli, Athens &nbsp;·&nbsp; Need reupholstery; one needs regluing</p>
       <p class="notes">1961 — the exact launch year of the Saridis/Robsjohn-Gibbings line. Cheap project set; check the 5 photos for the klismos profile before visiting.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="xe.gr last-modified date">Listed 13 Aug 2026*</span> &nbsp;·&nbsp; Found 18 Aug 2026, 00:00</p>
@@ -222,13 +242,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.1stdibs.com/furniture/seating/chairs/early-th-robsjohn-gibbings-klismos-chair-saridis-athens/id-f_1112538/" data-rel="4" data-found="1786894800" data-listed="1396821600">
     <div class="photo"><img src="images/908fdfcf0b17.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/early-th-robsjohn-gibbings-klismos-chair-saridis-athens/id-f_1112538/" target="_blank" rel="noopener">Early T.H. Robsjohn-Gibbings klismos chair for Saridis of Athens, c. 1960 — walnut &amp; leather</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/early-th-robsjohn-gibbings-klismos-chair-saridis-athens/id-f_1112538/" target="_blank" rel="noopener">Early T.H. Robsjohn-Gibbings klismos chair for Saridis of Athens, c. 1960 — walnut &amp; leather</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">$ 10,200 <small>list $12,000</small></p>
       <p class="meta">1stDibs &nbsp;·&nbsp; Dronten, Netherlands &nbsp;·&nbsp; Excellent, all original, maker&#x27;s metal label</p>
       <p class="notes">The ur-piece of the school Neonakis worked in. Provenance: Royal Dutch Shell executive office. Seller offers museum-quality crating and worldwide shipping.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="1stDibs photo upload date; page archived since May 2014">Listed 7 Apr 2014*</span> &nbsp;·&nbsp; Found 16 Aug 2026, 17:40</p>
@@ -238,12 +260,14 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.1stdibs.com/furniture/seating/dining-room-chairs/th-robsjohn-gibbings-saridis-klismos-chairs-walnut-leather-thongs/id-f_25702382" data-rel="4" data-found="1786894800" data-listed="1634248800">
     <div class="photo"><img src="images/d20a66a99de7.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.1stdibs.com/furniture/seating/dining-room-chairs/th-robsjohn-gibbings-saridis-klismos-chairs-walnut-leather-thongs/id-f_25702382" target="_blank" rel="noopener">T.H. Robsjohn-Gibbings for Saridis klismos chairs, walnut &amp; leather thongs, c. 1960s</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.1stdibs.com/furniture/seating/dining-room-chairs/th-robsjohn-gibbings-saridis-klismos-chairs-walnut-leather-thongs/id-f_25702382" target="_blank" rel="noopener">T.H. Robsjohn-Gibbings for Saridis klismos chairs, walnut &amp; leather thongs, c. 1960s</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">on request <small>inquire with seller</small></p>
       <p class="meta">1stDibs &nbsp;·&nbsp; St. Louis, MO, USA &nbsp;·&nbsp; Good, refinished, light touch-ups</p>
       <p class="notes">Multiple chairs (dining set). Same Saridis production as the single Dronten chair.</p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="1stDibs photo upload date; page archived since Nov 2021">Listed 15 Oct 2021*</span> &nbsp;·&nbsp; Found 16 Aug 2026, 17:40</p>
@@ -253,13 +277,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/0m995k/chiropiiti-skalisti-trapezaria-karidias-san-kenourgia-me-6-karekles-ke-gialini-epifania.html" data-rel="3" data-found="1786894800" data-listed="1784239200">
     <div class="photo"><img src="images/0670d1beb125.webp" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/0m995k/chiropiiti-skalisti-trapezaria-karidias-san-kenourgia-me-6-karekles-ke-gialini-epifania.html" target="_blank" rel="noopener">Χειροποίητη σκαλιστή τραπεζαρία καρυδιάς με 6 καρέκλες και γυάλινη επιφάνεια — σαν καινούργια</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/0m995k/chiropiiti-skalisti-trapezaria-karidias-san-kenourgia-me-6-karekles-ke-gialini-epifania.html" target="_blank" rel="noopener">Χειροποίητη σκαλιστή τραπεζαρία καρυδιάς με 6 καρέκλες και γυάλινη επιφάνεια — σαν καινούργια</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 500 <small>asking price</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Thessaloniki 54250 &nbsp;·&nbsp; Like new</p>
       <p class="notes">Hand-carved classic walnut set, 1.57 × 0.97 m table with protective glass top, seller pitches it for &quot;classical or neoclassical interiors&quot;. Unattributed maker.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;published over 1 month ago&quot; — on or before this date">Listed 17 Jul 2026*</span> &nbsp;·&nbsp; Found 16 Aug 2026, 17:40</p>
@@ -269,13 +295,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/3nmdpk5/trapezaria-metachirismeni-elliniki-karidia-1958-me-exi-karekles-ke-skalisma.html" data-rel="3" data-found="1786894800" data-listed="1784239200">
     <div class="photo"><img src="images/7bb1c141d3fa.webp" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/3nmdpk5/trapezaria-metachirismeni-elliniki-karidia-1958-me-exi-karekles-ke-skalisma.html" target="_blank" rel="noopener">Τραπεζαρία ελληνική καρυδιά 1958, έξι καρέκλες, σκάλισμα, πόδια-νύχια αετού</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/3nmdpk5/trapezaria-metachirismeni-elliniki-karidia-1958-me-exi-karekles-ke-skalisma.html" target="_blank" rel="noopener">Τραπεζαρία ελληνική καρυδιά 1958, έξι καρέκλες, σκάλισμα, πόδια-νύχια αετού</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 500 <small>asking price</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Patra 26223 &nbsp;·&nbsp; Used, chairs&#x27; fabric undamaged</p>
       <p class="notes">1958 hand-carved Greek walnut set with eagle-claw feet and hidden drawers in both short table sides. Older generation than Neonakis but the same tradition.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;published 1 month ago&quot; — approximate">Listed 17 Jul 2026*</span> &nbsp;·&nbsp; Found 16 Aug 2026, 17:40</p>
@@ -290,12 +318,14 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.1stdibs.com/furniture/seating/chairs/early-matching-pair-th-robsjohn-gibbings-klismos-chairs-saridis-athens/id-f_47950852/" data-rel="4" data-found="1787004000" data-listed="0">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/early-matching-pair-th-robsjohn-gibbings-klismos-chairs-saridis-athens/id-f_47950852/" target="_blank" rel="noopener">Early matching pair, T.H. Robsjohn-Gibbings klismos chairs for Saridis of Athens</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/early-matching-pair-th-robsjohn-gibbings-klismos-chairs-saridis-athens/id-f_47950852/" target="_blank" rel="noopener">Early matching pair, T.H. Robsjohn-Gibbings klismos chairs for Saridis of Athens</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">$ 21,500</p>
       <p class="meta">1stDibs &nbsp;·&nbsp; Very good, all-original finish, minor chips</p>
       <p class="notes">Original-finish early pair — the exact walnut/leather-thong klismos form.</p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 18 Aug 2026, 00:00</p>
@@ -305,12 +335,14 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.chairish.com/product/1931835/" data-rel="4" data-found="1787004000" data-listed="0">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://www.chairish.com/product/1931835/" target="_blank" rel="noopener">Saridis of Athens walnut &amp; leather klismos chairs, pair, 1960s — brass Saridis label</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.chairish.com/product/1931835/" target="_blank" rel="noopener">Saridis of Athens walnut &amp; leather klismos chairs, pair, 1960s — brass Saridis label</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">$ 18,995</p>
       <p class="meta">Chairish &nbsp;·&nbsp; Hatfield, PA (Bucks County Estate Traders) &nbsp;·&nbsp; Good original</p>
       <p class="notes">Labelled Saridis pair, good original condition.</p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 18 Aug 2026, 00:00</p>
@@ -320,13 +352,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.1stdibs.com/furniture/seating/chairs/id-f_33649632/" data-rel="4" data-found="1787004000" data-listed="0">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/id-f_33649632/" target="_blank" rel="noopener">Set of 4 T.H. Robsjohn-Gibbings klismos chairs, Saridis of Athens</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/id-f_33649632/" target="_blank" rel="noopener">Set of 4 T.H. Robsjohn-Gibbings klismos chairs, Saridis of Athens</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">$ 26,000</p>
       <p class="meta">1stDibs</p>
       <p class="notes">A true set of four — closest to replacing the room&#x27;s 3-4 matched chairs in one purchase. (A set of 12 also exists at $99,000, id-f_25688872.)
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 18 Aug 2026, 00:00</p>
@@ -336,13 +370,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.1stdibs.com/furniture/seating/chairs/klismos-chairs-style-th-robsjohn-gibbings-reupholstered-your-fabric/id-f_34833052/" data-rel="3" data-found="1787004000" data-listed="0">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/klismos-chairs-style-th-robsjohn-gibbings-reupholstered-your-fabric/id-f_34833052/" target="_blank" rel="noopener">Klismos chairs in the style of Robsjohn-Gibbings — reupholstered in your fabric</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/klismos-chairs-style-th-robsjohn-gibbings-reupholstered-your-fabric/id-f_34833052/" target="_blank" rel="noopener">Klismos chairs in the style of Robsjohn-Gibbings — reupholstered in your fabric</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">$ 2,250-2,400 each</p>
       <p class="meta">1stDibs</p>
       <p class="notes">Style pieces, not Saridis — but sabre legs, curved back, and seats made up in any fabric, so the cream seats can be matched to the photos. The budget route to a full matched set (accept_replica is true).
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 18 Aug 2026, 00:00</p>
@@ -352,13 +388,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/xqzqood/karekles-tipou-klismos-metachirismenes-set-3-me-plekto-kathisma-mesopolemikes.html" data-rel="4" data-found="1787004000" data-listed="1784325600">
     <div class="photo"><img src="images/5fcae2334633.webp" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/xqzqood/karekles-tipou-klismos-metachirismenes-set-3-me-plekto-kathisma-mesopolemikes.html" target="_blank" rel="noopener">Καρέκλες τύπου Κλισμός, σετ 3, πλεκτό κάθισμα — μεσοπολεμικές</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/xqzqood/karekles-tipou-klismos-metachirismenes-set-3-me-plekto-kathisma-mesopolemikes.html" target="_blank" rel="noopener">Καρέκλες τύπου Κλισμός, σετ 3, πλεκτό κάθισμα — μεσοπολεμικές</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 1,000</p>
       <p class="meta">Vendora &nbsp;·&nbsp; Central Athens 10675 (seller Dimitri) &nbsp;·&nbsp; Used, excellent/stable</p>
       <p class="notes">The only true klismos-form set live in Greece right now. Interwar era, woven seats (not cream-upholstered) — close to the Neonakis/Saridis woven-strap idiom, and in Athens for easy viewing.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;published 1+ month ago&quot; — approximate">Listed 18 Jul 2026*</span> &nbsp;·&nbsp; Found 18 Aug 2026, 00:00</p>
@@ -368,13 +406,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.1stdibs.com/furniture/seating/chairs/th-robsjohn-gibbings-klismos-chairs-saridis-athens/id-f_3815742/" data-rel="5" data-found="1786959000" data-listed="1455404400">
     <div class="photo"><img src="images/99c9f51b7a53.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/th-robsjohn-gibbings-klismos-chairs-saridis-athens/id-f_3815742/" target="_blank" rel="noopener">T.H. Robsjohn-Gibbings klismos chairs by Saridis of Athens, 1960s — walnut, leather woven seats (3 available)</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/th-robsjohn-gibbings-klismos-chairs-saridis-athens/id-f_3815742/" target="_blank" rel="noopener">T.H. Robsjohn-Gibbings klismos chairs by Saridis of Athens, 1960s — walnut, leather woven seats (3 available)</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">on request <small>inquire with seller</small></p>
       <p class="meta">1stDibs &nbsp;·&nbsp; Riverdale, NY, USA</p>
       <p class="notes">Three Greek-made walnut klismos chairs — the closest available match to the living-room side chairs in the magazine photos.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="1stDibs photo upload date">Listed 14 Feb 2016*</span> &nbsp;·&nbsp; Found 17 Aug 2026, 11:30</p>
@@ -384,12 +424,14 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.1stdibs.com/furniture/seating/chairs/robsjohn-gibbings-klismos-side-chairs/id-f_78537/" data-rel="4" data-found="1786959000" data-listed="1232060400">
     <div class="photo"><img src="images/3bb4032898d8.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/robsjohn-gibbings-klismos-side-chairs/id-f_78537/" target="_blank" rel="noopener">Robsjohn-Gibbings klismos side chairs — walnut and muslin, made in Greece</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.1stdibs.com/furniture/seating/chairs/robsjohn-gibbings-klismos-side-chairs/id-f_78537/" target="_blank" rel="noopener">Robsjohn-Gibbings klismos side chairs — walnut and muslin, made in Greece</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">on request <small>inquire with seller</small></p>
       <p class="meta">1stDibs &nbsp;·&nbsp; Los Angeles, CA, USA</p>
       <p class="notes">Greek production, pale upholstered seats like the photo chairs.</p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="1stDibs photo upload date — on the site ~17 years">Listed 16 Jan 2009*</span> &nbsp;·&nbsp; Found 17 Aug 2026, 11:30</p>
@@ -399,13 +441,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.pamono.eu/walnut-wood-white-leather-saber-legged-klismos-dining-chair-from-pescetta" data-rel="2" data-found="1786959000" data-listed="0">
     <div class="photo"><img src="images/7020b1b7390f.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.pamono.eu/walnut-wood-white-leather-saber-legged-klismos-dining-chair-from-pescetta" target="_blank" rel="noopener">Pescetta klismos dining chair — walnut, sabre legs, white leather seat (new, customizable)</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.pamono.eu/walnut-wood-white-leather-saber-legged-klismos-dining-chair-from-pescetta" target="_blank" rel="noopener">Pescetta klismos dining chair — walnut, sabre legs, white leather seat (new, customizable)</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 2,300 <small>per chair, new production</small></p>
       <p class="meta">Pamono &nbsp;·&nbsp; Italy (made to order) &nbsp;·&nbsp; New</p>
       <p class="notes">Modern replica route — customizable wood finish and seat, so a full matching set to the photo chairs is possible. accept_replica is true for this item.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Pamono shows no listing date — new made-to-order production, continuously available">Listing date n/a*</span> &nbsp;·&nbsp; Found 17 Aug 2026, 11:30</p>
@@ -420,13 +464,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.1stdibs.com/furniture/seating/chaise-longues/klini-lounge-th-robsjohn-gibbings-saridis-athens/id-f_45418842/" data-rel="5" data-found="1787004000" data-listed="0">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://www.1stdibs.com/furniture/seating/chaise-longues/klini-lounge-th-robsjohn-gibbings-saridis-athens/id-f_45418842/" target="_blank" rel="noopener">Klini Lounge, T.H. Robsjohn-Gibbings for Saridis of Athens, 1960s — walnut &amp; leather strap</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.1stdibs.com/furniture/seating/chaise-longues/klini-lounge-th-robsjohn-gibbings-saridis-athens/id-f_45418842/" target="_blank" rel="noopener">Klini Lounge, T.H. Robsjohn-Gibbings for Saridis of Athens, 1960s — walnut &amp; leather strap</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">$ 30,000</p>
       <p class="meta">1stDibs &nbsp;·&nbsp; USA &nbsp;·&nbsp; Cord replaced at original gauge</p>
       <p class="notes">The authentic kline — the exact Saridis/Robsjohn-Gibbings form the family&#x27;s Neonakis daybed followed. Expensive, but the truest available match for this item found anywhere.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 18 Aug 2026, 00:00</p>
@@ -436,13 +482,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/2o58gm3/" data-rel="2" data-found="1787004000" data-listed="0">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/2o58gm3/" target="_blank" rel="noopener">Ξύλινο ανάκλιντρο σκαλιστό vintage — τορνευτά πόδια</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/2o58gm3/" target="_blank" rel="noopener">Ξύλινο ανάκλιντρο σκαλιστό vintage — τορνευτά πόδια</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 95</p>
       <p class="meta">Vendora &nbsp;·&nbsp; Piraeus (5.0★ seller) &nbsp;·&nbsp; Needs new cushion</p>
       <p class="notes">Cheapest path to the classical-kline look: carved frame with column-turned legs; would need a long cream cushion made. A car.gr alternative exists too (mahogany, red velvet, €400, /xyma/view/327467867, plus two unfinished frames at €400 each that could be done in cream).
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 18 Aug 2026, 00:00</p>
@@ -457,13 +505,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.1stdibs.com/furniture/rugs-carpets/western-european-rugs/vintage-greek-carpet/id-f_15063151/" data-rel="5" data-found="1786968000" data-listed="1560204000">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://www.1stdibs.com/furniture/rugs-carpets/western-european-rugs/vintage-greek-carpet/id-f_15063151/" target="_blank" rel="noopener">Vintage Greek carpet, c. 1940 — hand-knotted wool, green &amp; pink floral field, 302 × 366 cm</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.1stdibs.com/furniture/rugs-carpets/western-european-rugs/vintage-greek-carpet/id-f_15063151/" target="_blank" rel="noopener">Vintage Greek carpet, c. 1940 — hand-knotted wool, green &amp; pink floral field, 302 × 366 cm</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">on request <small>inquire with seller</small></p>
       <p class="meta">1stDibs &nbsp;·&nbsp; New York, NY, USA (dealer est. 1974) &nbsp;·&nbsp; Good, wear consistent with age</p>
       <p class="notes">The closest match found: Greek origin, right era, hand-knotted wool, floral field in dominant green and pink, and nearly the size of the living-room carpet in the magazine photos. Ask the dealer for detail photos.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="1stDibs photo upload date">Listed 11 Jun 2019*</span> &nbsp;·&nbsp; Found 17 Aug 2026, 14:00</p>
@@ -473,13 +523,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.com/itm/326687383085" data-rel="1" data-found="1786968000" data-listed="1752530400">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://www.ebay.com/itm/326687383085" target="_blank" rel="noopener">Traditional green area rug 10 × 12 ft — hand-knotted wool, floral, 1970s (actual 9&#x27;8&quot; × 12&#x27;3&quot;)</a><span class="tag rejected">Rejected</span></h3>
+      <h3><a href="https://www.ebay.com/itm/326687383085" target="_blank" rel="noopener">Traditional green area rug 10 × 12 ft — hand-knotted wool, floral, 1970s (actual 9&#x27;8&quot; × 12&#x27;3&quot;)</a><span class="tag rejected">Rejected</span><span class="tag mine" hidden></span></h3>
       <p class="price">see listing</p>
       <p class="meta">eBay.com &nbsp;·&nbsp; USA (RugHouse) &nbsp;·&nbsp; Pre-owned, professionally cleaned, medium pile</p>
       <p class="notes">Rejected 2026-08-18: 1970s is too recent — the family&#x27;s carpets date from the 1950s-60s or earlier, and per the owner anything post-1970 is out. Scale was right, era wasn&#x27;t.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="eBay listing start date">Listed 15 Jul 2025*</span> &nbsp;·&nbsp; Found 17 Aug 2026, 14:00</p>
@@ -489,13 +541,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.com/itm/235755953741" data-rel="3" data-found="1786968000" data-listed="1726956000">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://www.ebay.com/itm/235755953741" target="_blank" rel="noopener">Floral green traditional hand-made dining room rug, 10 × 13 ft — vintage</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.com/itm/235755953741" target="_blank" rel="noopener">Floral green traditional hand-made dining room rug, 10 × 13 ft — vintage</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">see listing</p>
       <p class="meta">eBay.com &nbsp;·&nbsp; USA</p>
       <p class="notes">Second oversized green floral hand-made option, same look-alike route. NOTE 2026-08-18: age is only &quot;vintage&quot; — must verify it dates pre-1970 (owner&#x27;s rule: 1950s-60s or earlier) before shortlisting further.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="eBay listing start date">Listed 22 Sep 2024*</span> &nbsp;·&nbsp; Found 17 Aug 2026, 14:00</p>
@@ -505,13 +559,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/keo0j5/chali-anatolia-metachirismeno-vintage-olomallo-200x260m-prasino-mpez.html" data-rel="1" data-found="1786968000" data-listed="1784239200">
     <div class="photo"><img src="images/0c7f3e72a93f.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/keo0j5/chali-anatolia-metachirismeno-vintage-olomallo-200x260m-prasino-mpez.html" target="_blank" rel="noopener">Χαλί Ανατολία vintage ολόμαλλο 2.00 × 2.60 μ. — πράσινο/μπεζ, άριστη κατάσταση</a><span class="tag rejected">Rejected</span></h3>
+      <h3><a href="https://vendora.gr/items/keo0j5/chali-anatolia-metachirismeno-vintage-olomallo-200x260m-prasino-mpez.html" target="_blank" rel="noopener">Χαλί Ανατολία vintage ολόμαλλο 2.00 × 2.60 μ. — πράσινο/μπεζ, άριστη κατάσταση</a><span class="tag rejected">Rejected</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 195 <small>asking price</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Kouvaras 19003 (seller &quot;sofia m&quot;, 5.0 rating) &nbsp;·&nbsp; Excellent, professionally cleaned</p>
       <p class="notes">Rejected 2026-08-18: too small (2.00 × 2.60 m) — the family&#x27;s carpets are room-size, and per the owner small rugs are out. Also no florals.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;published over 1 month ago&quot; — on or before this date">Listed 17 Jul 2026*</span> &nbsp;·&nbsp; Found 17 Aug 2026, 14:00</p>
@@ -526,13 +582,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.it/itm/354530238511" data-rel="2" data-found="1787568000" data-listed="1674082800">
     <div class="photo"><img src="images/d563154c6a4b.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.it/itm/354530238511" target="_blank" rel="noopener">Vintage Greek National Welfare Organisation tapestry handbag — god&#x27;s-eye and tulip motif</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.it/itm/354530238511" target="_blank" rel="noopener">Vintage Greek National Welfare Organisation tapestry handbag — god&#x27;s-eye and tulip motif</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 47 <small>buy now ($54.89)</small></p>
       <p class="meta">eBay.it &nbsp;·&nbsp; North Adams, MA, US (seller jewel-t-joe)</p>
       <p class="notes">Not a carpet — a woven tapestry handbag from the same Εθνικός Οργανισμός Πρόνοιας (National Welfare Organisation) workshops that made the family&#x27;s carpets. The carpet size/age rules don&#x27;t apply to non-carpets; kept as a small piece of genuine Οικοτεχνία provenance, ~$55.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="eBay itemCreationDate via Browse API">Listed 19 Jan 2023*</span> &nbsp;·&nbsp; Found 24 Aug 2026, 12:40</p>
@@ -542,13 +600,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/zjnkd7d/chiropiito-mallino-chali-metachirismeno-schedio-kozani-230x330-ek.html" data-rel="5" data-found="1787004000" data-listed="1784325600">
     <div class="photo"><img src="images/acbeb75be865.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/zjnkd7d/chiropiito-mallino-chali-metachirismeno-schedio-kozani-230x330-ek.html" target="_blank" rel="noopener">Χειροποίητο μάλλινο χαλί ΕΟΠ, σχέδιο Κοζάνη, 2.30 × 3.30 μ. — μπλε δέντρο της ζωής με άνθη</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/zjnkd7d/chiropiito-mallino-chali-metachirismeno-schedio-kozani-230x330-ek.html" target="_blank" rel="noopener">Χειροποίητο μάλλινο χαλί ΕΟΠ, σχέδιο Κοζάνη, 2.30 × 3.30 μ. — μπλε δέντρο της ζωής με άνθη</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 1,000 <small>buy-now or offer</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Kalamaria, Thessaloniki (seller &quot;Spilios&quot;) &nbsp;·&nbsp; Used, good pile</p>
       <p class="notes">THE provenance match of the sweep: explicitly stated as made by the Εθνικός Οργανισμός Πρόνοιας (the Royal Welfare Fund successor — the family&#x27;s school), 100% handwoven on loom, domestic virgin wool, 50+ years old. &quot;Kozani design&quot; tree-of-life with floral details on a BLUE ground. Slightly under the size minimum (2.30 × 3.30) and blue not green — but the only live listing found with explicit Πρόνοια/ΕΟΠ provenance.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;published ~1 month ago&quot; — approximate">Listed 18 Jul 2026*</span> &nbsp;·&nbsp; Found 18 Aug 2026, 00:00</p>
@@ -558,13 +618,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/oj8q0oe/chiropiito-chali-argaliou-285x390-san-kenourgio-me-zontana-chromata.html" data-rel="3" data-found="1787004000" data-listed="1784325600">
     <div class="photo"><img src="images/e2238f8ad9c4.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/oj8q0oe/chiropiito-chali-argaliou-285x390-san-kenourgio-me-zontana-chromata.html" target="_blank" rel="noopener">Χειροποίητο χαλί αργαλειού 2.85 × 3.90 μ. — μάλλινο, ζωντανά χρώματα</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/oj8q0oe/chiropiito-chali-argaliou-285x390-san-kenourgio-me-zontana-chromata.html" target="_blank" rel="noopener">Χειροποίητο χαλί αργαλειού 2.85 × 3.90 μ. — μάλλινο, ζωντανά χρώματα</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 700</p>
       <p class="meta">Vendora &nbsp;·&nbsp; Chalandri / Kypseli, Athens &nbsp;·&nbsp; Like new, freshly cleaned</p>
       <p class="notes">True room size (2.85 × 3.90) handwoven wool loom carpet, described as antique/vintage. Caveats: &quot;oriental&quot; pattern so Greek manufacture not confirmed, and no decade stated — verify pre-1970 with the seller.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;published ~1 month ago&quot; — approximate">Listed 18 Jul 2026*</span> &nbsp;·&nbsp; Found 18 Aug 2026, 00:00</p>
@@ -574,13 +636,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/yk6pww/chali-mallino-pachi-ifanto-ioanninon-metachirismeno-megali-diastasi.html" data-rel="3" data-found="1787004000" data-listed="1784325600">
     <div class="photo"><img src="images/1fb0096cb143.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/yk6pww/chali-mallino-pachi-ifanto-ioanninon-metachirismeno-megali-diastasi.html" target="_blank" rel="noopener">Χαλί μάλλινο παχύ υφαντό Ιωαννίνων, ~2.50 × 3.50 μ.</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/yk6pww/chali-mallino-pachi-ifanto-ioanninon-metachirismeno-megali-diastasi.html" target="_blank" rel="noopener">Χαλί μάλλινο παχύ υφαντό Ιωαννίνων, ~2.50 × 3.50 μ.</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 60</p>
       <p class="meta">Vendora &nbsp;·&nbsp; Rafina, Attica &nbsp;·&nbsp; Used</p>
       <p class="notes">Thick handwoven wool with an IOANNINA attribution in the title — the right region — at a trivial €60. Exactly at the size minimum. Age unstated: ask the seller for the age and field-design photos before dismissing or buying.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;published 1+ month ago&quot; — approximate">Listed 18 Jul 2026*</span> &nbsp;·&nbsp; Found 18 Aug 2026, 00:00</p>
@@ -590,13 +654,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/qq47p24/kritiko-chiropiito-chali-argaliou-1920-30-megali-diastasi.html" data-rel="3" data-found="1787004000" data-listed="1786399200">
     <div class="photo"><img src="images/d70edc455abe.webp" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/qq47p24/kritiko-chiropiito-chali-argaliou-1920-30-megali-diastasi.html" target="_blank" rel="noopener">Κρητικό χειροποίητο χαλί αργαλειού 1920-30, μεγάλη διάσταση σαλονιού — αχρησιμοποίητο</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/qq47p24/kritiko-chiropiito-chali-argaliou-1920-30-megali-diastasi.html" target="_blank" rel="noopener">Κρητικό χειροποίητο χαλί αργαλειού 1920-30, μεγάλη διάσταση σαλονιού — αχρησιμοποίητο</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 800</p>
       <p class="meta">Vendora &nbsp;·&nbsp; Heraklion, Crete &nbsp;·&nbsp; Unused, stored in a trunk</p>
       <p class="notes">Handwoven Chania 1920-1930, virgin local sheep wool — clearly pre-1970 Greek handmade. Same seller also offers a €2,000 &quot;collector&#x27;s piece&quot; sibling (vendora items/qq47p64). Exact dimensions not stated (&quot;living-room size&quot;) — confirm ≥ 2.5 × 3.5 m with the seller before shortlisting either.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;published ~1 week ago&quot; — approximate">Listed 11 Aug 2026*</span> &nbsp;·&nbsp; Found 18 Aug 2026, 00:00</p>
@@ -606,13 +672,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.1stdibs.com/furniture/rugs-carpets/western-european-rugs/zabihi-collection-vintage-animal-bird-greek-rug-mid-20th-century/id-f_20823562" data-rel="3" data-found="1787004000" data-listed="0">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://www.1stdibs.com/furniture/rugs-carpets/western-european-rugs/zabihi-collection-vintage-animal-bird-greek-rug-mid-20th-century/id-f_20823562" target="_blank" rel="noopener">Zabihi Collection vintage Greek rug, mid-20th c. — animal &amp; bird pattern, 3.00 × 3.68 m</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.1stdibs.com/furniture/rugs-carpets/western-european-rugs/zabihi-collection-vintage-animal-bird-greek-rug-mid-20th-century/id-f_20823562" target="_blank" rel="noopener">Zabihi Collection vintage Greek rug, mid-20th c. — animal &amp; bird pattern, 3.00 × 3.68 m</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">~$3,500 <small>a near-identical listing from the same dealer (id-f_47968502) asks $5,500 — likely the same rug listed twice; ask</small></p>
       <p class="meta">1stDibs &nbsp;·&nbsp; New York (Zabihi Collection) &nbsp;·&nbsp; Vintage, good</p>
       <p class="notes">Room-size mid-century Greek wool carpet — both hard rules pass. Field is an allover animal/bird-and-cloud-band pattern on dark chocolate ground, so no green-floral bonus. Worth asking the dealer to clarify the duplicate listing.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 18 Aug 2026, 00:00</p>
@@ -622,13 +690,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.xe.gr/diafora-eidh/xalia-antikes%7Cad-856859078.html" data-rel="3" data-found="1786968000" data-listed="1786226400">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://www.xe.gr/diafora-eidh/xalia-antikes%7Cad-856859078.html" target="_blank" rel="noopener">Χαλί κρεμ «Ιωνίας» με κυπαρισσί πλαίσιο, ελληνική χειροτεχνία, 4.50 × 3.09 μ. — αμεταχείριστο</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.xe.gr/diafora-eidh/xalia-antikes%7Cad-856859078.html" target="_blank" rel="noopener">Χαλί κρεμ «Ιωνίας» με κυπαρισσί πλαίσιο, ελληνική χειροτεχνία, 4.50 × 3.09 μ. — αμεταχείριστο</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 800 <small>asking price</small></p>
       <p class="meta">xe.gr &nbsp;·&nbsp; Dionysos, Attica &nbsp;·&nbsp; Unused</p>
       <p class="notes">Gigantic unused Greek handmade carpet (cream field, cypress-green border) — &quot;Ιωνίας&quot; points to the Nea Ionia carpet works rather than the Frederica school, but it is the biggest Greek handmade piece currently listed. NOTE 2026-08-18: &quot;unused&quot; may mean recent production — ask seller for the weaving date; owner&#x27;s rule is pre-1970 only.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="xe.gr &quot;last modified&quot; date; original post date not shown">Listed 9 Aug 2026*</span> &nbsp;·&nbsp; Found 17 Aug 2026, 14:00</p>
@@ -638,13 +708,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/kyz6wwx/megalo-chiropiito-chali-argaliou-340-x-250-m-san-kenourgio-me-paradosiako-schedio.html" data-rel="3" data-found="1786968000" data-listed="1784239200">
     <div class="photo"><img src="images/0fb1c2741ff1.webp" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/kyz6wwx/megalo-chiropiito-chali-argaliou-340-x-250-m-san-kenourgio-me-paradosiako-schedio.html" target="_blank" rel="noopener">Μεγάλο χειροποίητο χαλί αργαλειού 3.40 × 2.50 μ. — παραδοσιακό σχέδιο με άνθη, σαν καινούργιο</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/kyz6wwx/megalo-chiropiito-chali-argaliou-340-x-250-m-san-kenourgio-me-paradosiako-schedio.html" target="_blank" rel="noopener">Μεγάλο χειροποίητο χαλί αργαλειού 3.40 × 2.50 μ. — παραδοσιακό σχέδιο με άνθη, σαν καινούργιο</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 390 <small>asking price, offers accepted</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Kallithea 17675 &nbsp;·&nbsp; Like new</p>
       <p class="notes">Large Greek loom-woven wool rug, traditional geometric design with floral motifs (red/green/blue on beige). Right tradition and scale; maker unknown. NOTE 2026-08-18: &quot;σαν καινούργιο&quot; may mean recent — verify it was woven pre-1970 before shortlisting; owner&#x27;s rule is 1950s-60s or earlier.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;published 1 month ago&quot; — approximate">Listed 17 Jul 2026*</span> &nbsp;·&nbsp; Found 17 Aug 2026, 14:00</p>
@@ -659,13 +731,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.1stdibs.com/furniture/tables/coffee-tables-cocktail-tables/maitland-smith-empire-style-large-banded-inlay-mahogany-glass-top-coffee-table/id-f_50650542/" data-rel="3" data-found="1787004000" data-listed="0">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://www.1stdibs.com/furniture/tables/coffee-tables-cocktail-tables/maitland-smith-empire-style-large-banded-inlay-mahogany-glass-top-coffee-table/id-f_50650542/" target="_blank" rel="noopener">Maitland-Smith Empire-style two-tier mahogany coffee table, inset beveled glass top</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.1stdibs.com/furniture/tables/coffee-tables-cocktail-tables/maitland-smith-empire-style-large-banded-inlay-mahogany-glass-top-coffee-table/id-f_50650542/" target="_blank" rel="noopener">Maitland-Smith Empire-style two-tier mahogany coffee table, inset beveled glass top</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">$ 2,500</p>
       <p class="meta">1stDibs</p>
       <p class="notes">Closest live match this sweep: two tiers, dark wood, glass top — but six sabre legs rather than hoof feet, and not round. The exact hoof-foot round form found nothing live; target stays open.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 18 Aug 2026, 00:00</p>
@@ -675,13 +749,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/eyxpjjy/vintage-diorofo-trapezaki-saloniou-saridi-san-kenourgio-mprountzos-ke-fime-giali.html" data-rel="2" data-found="1787004000" data-listed="1786485600">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/eyxpjjy/vintage-diorofo-trapezaki-saloniou-saridi-san-kenourgio-mprountzos-ke-fime-giali.html" target="_blank" rel="noopener">Vintage διώροφο τραπεζάκι σαλονιού Σαρίδη — μπρούντζος και φιμέ γυαλί</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/eyxpjjy/vintage-diorofo-trapezaki-saloniou-saridi-san-kenourgio-mprountzos-ke-fime-giali.html" target="_blank" rel="noopener">Vintage διώροφο τραπεζάκι σαλονιού Σαρίδη — μπρούντζος και φιμέ γυαλί</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 250</p>
       <p class="meta">Vendora &nbsp;·&nbsp; Athens (Gold seller, 4.8★) &nbsp;·&nbsp; Like new</p>
       <p class="notes">Two-tier and genuinely Saridis, but rectangular bronze/smoked-glass Hollywood Regency — not the round wooden hoof-foot form. Noted as a stopgap only; the real target found nothing live this sweep.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;posted 6 days ago&quot; from 2026-08-18">Listed 12 Aug 2026*</span> &nbsp;·&nbsp; Found 18 Aug 2026, 00:00</p>
@@ -696,13 +772,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/gx1wx03/manouali-metachirismeno-vintaz-apo-masif-mproutzo.html" data-rel="5" data-found="1787176800" data-listed="1784498400">
     <div class="photo"><img src="images/f631a5059e44.webp" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/gx1wx03/manouali-metachirismeno-vintaz-apo-masif-mproutzo.html" target="_blank" rel="noopener">Μανουάλι μεταχειρισμένο, βιντάζ, από μασίφ μπρούτζο (~25 kg)</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/gx1wx03/manouali-metachirismeno-vintaz-apo-masif-mproutzo.html" target="_blank" rel="noopener">Μανουάλι μεταχειρισμένο, βιντάζ, από μασίφ μπρούτζο (~25 kg)</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 800 <small>asking price</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Thrakomakedones, Attica 13676 (pickup only) &nbsp;·&nbsp; Used / vintage</p>
       <p class="notes">VISUAL MATCH CONFIRMED against the magazine detail photo: three tiered brass rings of small turned candle sockets — the same construction as the family&#x27;s manouali. Maker plaque on the crown ring reads &quot;Κ.&amp;Γ. ΒΟΓΙΑΤΖΗ ΑΘΗΝΑΙ&quot; (Voyatzis, Athens). ~25 kg solid bronze, floor-standing. Reliable seller (4.9/67 reviews). Best find of the 2026-08-20 sweep — ask for height to confirm scale.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;posted 1 month ago&quot; from 2026-08-20 — approximate">Listed 20 Jul 2026*</span> &nbsp;·&nbsp; Found 20 Aug 2026, 00:00</p>
@@ -712,13 +790,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.co.uk/itm/306503136551" data-rel="2" data-found="1787176800" data-listed="0">
     <div class="photo"><img src="images/55400e21a752.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.co.uk/itm/306503136551" target="_blank" rel="noopener">Tall Antique Brass Floor Standing Church Candle Holder</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.co.uk/itm/306503136551" target="_blank" rel="noopener">Tall Antique Brass Floor Standing Church Candle Holder</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">£ 1,150 <small>buy now</small></p>
       <p class="meta">eBay.co.uk &nbsp;·&nbsp; United Kingdom</p>
       <p class="notes">Listing photo shows a SINGLE-candle pricket stand on a flared base — a church floor candlestick, but not the multi-socket tiered manouali the family had. Kept only as a fallback for the general type; the Vendora Voyatzis piece is the real match.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 20 Aug 2026, 00:00</p>
@@ -733,13 +813,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/11y194z/epitichios-kathreftis-gallikou-tipou-louis-xvi-me-skalisti-chrisi-korniza.html" data-rel="4" data-found="1787176800" data-listed="1787090400">
     <div class="photo"><img src="images/cec795842801.webp" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/11y194z/epitichios-kathreftis-gallikou-tipou-louis-xvi-me-skalisti-chrisi-korniza.html" target="_blank" rel="noopener">Επιτοίχιος καθρέφτης γαλλικού τύπου Louis XVI με σκαλιστή χρυσή κορνίζα</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/11y194z/epitichios-kathreftis-gallikou-tipou-louis-xvi-me-skalisti-chrisi-korniza.html" target="_blank" rel="noopener">Επιτοίχιος καθρέφτης γαλλικού τύπου Louis XVI με σκαλιστή χρυσή κορνίζα</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 280 <small>asking price</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Athens &nbsp;·&nbsp; Like new</p>
       <p class="notes">Giltwood with a carved openwork crest of roses and foliage around a cartouche — the crest character is right. But the listing photo shows a rectangular plate, not the arched top of the lost mirror, and it reads smaller than the tall pier mirror in the magazine. Fresh listing, super seller (4.8/153). Ask for height; good if no arched one surfaces.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;posted 18 hours ago&quot; on 2026-08-20">Listed 19 Aug 2026*</span> &nbsp;·&nbsp; Found 20 Aug 2026, 00:00</p>
@@ -749,13 +831,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/ky6gq4x/kathreftis-skalistos-apo-agiaso-chiropiitos-apo-kamaro.html" data-rel="3" data-found="1787176800" data-listed="1786658400">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/ky6gq4x/kathreftis-skalistos-apo-agiaso-chiropiitos-apo-kamaro.html" target="_blank" rel="noopener">Καθρέφτης σκαλιστός από Αγιάσο, χειροποίητος</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/ky6gq4x/kathreftis-skalistos-apo-agiaso-chiropiitos-apo-kamaro.html" target="_blank" rel="noopener">Καθρέφτης σκαλιστός από Αγιάσο, χειροποίητος</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 1,600 <small>asking price (seller says valued €3,500)</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Saronida, Attica 19013 (pickup by meeting) &nbsp;·&nbsp; Like new</p>
       <p class="notes">Hand-carved mirror from Agiasos, Lesbos — the island&#x27;s famous woodcarving village, a nice echo of the family&#x27;s Mytilene κασέλα. Carved wood rather than gilt, so it matches the lost mirror in spirit more than in look. No dimensions given; ask.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;posted 6 days ago&quot; on 2026-08-20">Listed 14 Aug 2026*</span> &nbsp;·&nbsp; Found 20 Aug 2026, 00:00</p>
@@ -765,13 +849,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.com/itm/147505837401" data-rel="3" data-found="1787176800" data-listed="0">
     <div class="photo"><img src="images/3d30e83906c9.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.com/itm/147505837401" target="_blank" rel="noopener">Antique Neoclassical-style giltwood pier mirror</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.com/itm/147505837401" target="_blank" rel="noopener">Antique Neoclassical-style giltwood pier mirror</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">$ 380 <small>buy now</small></p>
       <p class="meta">eBay.com &nbsp;·&nbsp; United States &nbsp;·&nbsp; Used</p>
       <p class="notes">Cheapest of the eBay pier mirrors and described as neoclassical giltwood. US shipping for a tall mirror is the catch. Several stronger-looking but pricier UK options in the report (Victorian giltwood pier mirror £873, Louis XV revival £1,595).
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 20 Aug 2026, 00:00</p>
@@ -786,13 +872,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.de/itm/277825896143" data-rel="2" data-found="1787568000" data-listed="1774134000">
     <div class="photo"><img src="images/791818cb22cf.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.de/itm/277825896143" target="_blank" rel="noopener">Gudrun von Leitner — Stationen 1967–1987 (monograph, ed. Renate Kammer)</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.de/itm/277825896143" target="_blank" rel="noopener">Gudrun von Leitner — Stationen 1967–1987 (monograph, ed. Renate Kammer)</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 60 <small>buy now</small></p>
       <p class="meta">eBay.de &nbsp;·&nbsp; Munich, DE (seller primatexxt) &nbsp;·&nbsp; New</p>
       <p class="notes">Not an artwork — the monograph covering her 1967–1987 work. Useful to identify the lost flower aquarelle precisely (and may reproduce it), which would sharpen every future von Leitner search.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="eBay itemCreationDate via Browse API">Listed 22 Mar 2026*</span> &nbsp;·&nbsp; Found 24 Aug 2026, 12:40</p>
@@ -802,13 +890,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.de/itm/226430601917" data-rel="2" data-found="1787568000" data-listed="1730588400">
     <div class="photo"><img src="images/0319969c8767.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.de/itm/226430601917" target="_blank" rel="noopener">Gudrun von Leitner — Zwischen Wolke und Tulpe (Galerie von Loep exhibition catalogue)</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.de/itm/226430601917" target="_blank" rel="noopener">Gudrun von Leitner — Zwischen Wolke und Tulpe (Galerie von Loep exhibition catalogue)</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 12 <small>buy now</small></p>
       <p class="meta">eBay.de &nbsp;·&nbsp; Hamburg, DE (seller thabi-90)</p>
       <p class="notes">Hamburg exhibition catalogue (&quot;Between cloud and tulip&quot;) from her own gallery, Galerie von Loep — cheap companion reference to the monograph for identifying the lost aquarelle.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="eBay itemCreationDate via Browse API">Listed 3 Nov 2024*</span> &nbsp;·&nbsp; Found 24 Aug 2026, 12:40</p>
@@ -818,13 +908,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.fr/itm/192955138219" data-rel="4" data-found="1787218200" data-listed="0">
     <div class="photo"><img src="images/45e8b013001b.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.fr/itm/192955138219" target="_blank" rel="noopener">Gudrun von LEITNER — GRAVURES, DESSINS ET PROJETS, 10 gravures signées (Adam Biro)</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.fr/itm/192955138219" target="_blank" rel="noopener">Gudrun von LEITNER — GRAVURES, DESSINS ET PROJETS, 10 gravures signées (Adam Biro)</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 430 <small>buy now</small></p>
       <p class="meta">eBay.fr &nbsp;·&nbsp; France</p>
       <p class="notes">Portfolio of 10 signed engravings by von Leitner (Adam Biro edition). The cover plate (69/80, signed) shows an open window with clouds and tulips — strikingly close in spirit to the lost tulip aquarelle over the round table. Ten signed originals by the artist in one purchase.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 20 Aug 2026, 11:30</p>
@@ -834,13 +926,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.de/itm/234506116587" data-rel="4" data-found="1787218200" data-listed="0">
     <div class="photo"><img src="images/4d1e8a97ee2a.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.de/itm/234506116587" target="_blank" rel="noopener">Gudrun von Leitner — Originalradierung «Tulpe der Wolke» 1970, handsigniert, Blattgoldrahmen</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.de/itm/234506116587" target="_blank" rel="noopener">Gudrun von Leitner — Originalradierung «Tulpe der Wolke» 1970, handsigniert, Blattgoldrahmen</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 350 <small>buy now</small></p>
       <p class="meta">eBay.de &nbsp;·&nbsp; Germany</p>
       <p class="notes">Hand-signed original etching, edition 7/35, dated 1970, with a single red tulip accent — the artist&#x27;s signature motif, matching the subject of the lost aquarelle. Already framed in a silver-gilt frame with grey mat.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 20 Aug 2026, 11:30</p>
@@ -850,13 +944,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.de/itm/221436054648" data-rel="4" data-found="1787218200" data-listed="0">
     <div class="photo"><img src="images/5874ef75bd95.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.de/itm/221436054648" target="_blank" rel="noopener">Gudrun von Leitner — Farblithographie, mediterranes Griechenland (Greek house)</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.de/itm/221436054648" target="_blank" rel="noopener">Gudrun von Leitner — Farblithographie, mediterranes Griechenland (Greek house)</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 90 <small>buy now</small></p>
       <p class="meta">eBay.de &nbsp;·&nbsp; Germany</p>
       <p class="notes">Colour lithograph of a Greek/Mediterranean house with outdoor staircase — warm ochres, olive greens, sky blue. By the same artist AND a Greek subject: a natural fit for the rebuilt house, at a modest price.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 20 Aug 2026, 11:30</p>
@@ -866,13 +962,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.it/itm/186467089723" data-rel="3" data-found="1787218200" data-listed="0">
     <div class="photo"><img src="images/f97fe28341c7.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.it/itm/186467089723" target="_blank" rel="noopener">Gudrun von Leitner — lot of 2 signed E.A. colour lithographs from the Yannis Ritsos book, 1987</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.it/itm/186467089723" target="_blank" rel="noopener">Gudrun von Leitner — lot of 2 signed E.A. colour lithographs from the Yannis Ritsos book, 1987</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 84.78 <small>buy now</small></p>
       <p class="meta">eBay.it &nbsp;·&nbsp; Greece &nbsp;·&nbsp; Used</p>
       <p class="notes">Two artist&#x27;s-proof (E.A.) lithographs, both hand-signed &quot;von Leitner&quot;, from her 1987 illustrated book of Yannis Ritsos poems — a direct Greek connection. Seller is in Greece, so easy shipping. Looser, more playful sheets.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 20 Aug 2026, 11:30</p>
@@ -882,13 +980,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.de/itm/198157403303" data-rel="3" data-found="1787218200" data-listed="0">
     <div class="photo"><img src="images/f42059d3105f.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.de/itm/198157403303" target="_blank" rel="noopener">Gudrun von Leitner — «Springtime in Paris», Öl auf Papier / Monotypie, 1986</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.de/itm/198157403303" target="_blank" rel="noopener">Gudrun von Leitner — «Springtime in Paris», Öl auf Papier / Monotypie, 1986</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 2,250 <small>buy now</small></p>
       <p class="meta">eBay.de &nbsp;·&nbsp; Germany &nbsp;·&nbsp; Used</p>
       <p class="notes">A unique work (oil on paper / monotype, signed GvL), not a print — the only one-off by the artist purchasable online right now. Abstract composition with red-tipped tulip-like forms. Priced accordingly; the prints above are closer to the lost picture&#x27;s feel per euro.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 20 Aug 2026, 11:30</p>
@@ -898,13 +998,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.fr/itm/183961767927" data-rel="3" data-found="1787218200" data-listed="0">
     <div class="photo"><img src="images/6844acf25c2c.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.fr/itm/183961767927" target="_blank" rel="noopener">Gudrun von Leitner — Radierung «Farben für Tulpentüren», I/VII, signiert</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.fr/itm/183961767927" target="_blank" rel="noopener">Gudrun von Leitner — Radierung «Farben für Tulpentüren», I/VII, signiert</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 90 <small>buy now</small></p>
       <p class="meta">eBay.fr &nbsp;·&nbsp; France</p>
       <p class="notes">Signed etching, edition I/VII, framed — conceptual piece about &quot;colours for tulip doors&quot; (colour bars over a line drawing) rather than a flower picture. Tulip-themed and affordable, but drier in feel than the lost aquarelle.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 20 Aug 2026, 11:30</p>
@@ -919,13 +1021,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.it/itm/137653713117" data-rel="3" data-found="1787568000" data-listed="1787522400">
     <div class="photo"><img src="images/79725dc9833d.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.it/itm/137653713117" target="_blank" rel="noopener">Original 1921 watercolor, Greek column ruins, signed with initials V.J.C</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.it/itm/137653713117" target="_blank" rel="noopener">Original 1921 watercolor, Greek column ruins, signed with initials V.J.C</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 470 <small>buy now ($549)</small></p>
       <p class="meta">eBay.it &nbsp;·&nbsp; Hempstead, NY, US (seller artaccess2) &nbsp;·&nbsp; Used</p>
       <p class="notes">Original antique watercolor of a classical Greek column, dated 1921, signed with initials. Right subject and period for the neoclassical house&#x27;s walls. Listed the very day of this search run.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="eBay itemCreationDate via Browse API — listed today">Listed 24 Aug 2026*</span> &nbsp;·&nbsp; Found 24 Aug 2026, 12:40</p>
@@ -935,13 +1039,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.it/itm/187091582441" data-rel="3" data-found="1787568000" data-listed="1743202800">
     <div class="photo"><img src="images/086919e9e3c6.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.it/itm/187091582441" target="_blank" rel="noopener">Themos Avgerinos — signed miniature Greek landscape watercolor</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.it/itm/187091582441" target="_blank" rel="noopener">Themos Avgerinos — signed miniature Greek landscape watercolor</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 76 <small>buy now ($89)</small></p>
       <p class="meta">eBay.it &nbsp;·&nbsp; Athens, GR (seller guru_guru_nikos) &nbsp;·&nbsp; Used</p>
       <p class="notes">Signed miniature watercolor landscape by Greek painter Themos Avgerinos, sold from Athens. Small format — compare mood against the magazine-scan landscape before shortlisting.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="eBay itemCreationDate via Browse API">Listed 29 Mar 2025*</span> &nbsp;·&nbsp; Found 24 Aug 2026, 12:40</p>
@@ -951,13 +1057,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.com/itm/178453180714" data-rel="3" data-found="1787568000" data-listed="1788040800">
     <div class="photo"><img src="images/8866f2bf3b7e.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.com/itm/178453180714" target="_blank" rel="noopener">Set of 3 Greek-island watercolors, signed Schmitts — Mediterranean village scenes</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.com/itm/178453180714" target="_blank" rel="noopener">Set of 3 Greek-island watercolors, signed Schmitts — Mediterranean village scenes</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">$ 69.97 <small>buy now, for the set</small></p>
       <p class="meta">eBay.com &nbsp;·&nbsp; Glenview, IL, US (seller presto815) &nbsp;·&nbsp; Used</p>
       <p class="notes">Three signed watercolors of Greek island village scenes sold together — an easy way to re-fill a wall grouping. Seller relisted the set 30 Aug 2026 at a slightly lower price ($69.97, was $84.66).
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="relisted 30 Aug 2026 under new item id (was 178383014226, listed 7 Aug); eBay itemCreationDate via Browse API">Listed 30 Aug 2026*</span> &nbsp;·&nbsp; Found 24 Aug 2026, 12:40</p>
@@ -967,13 +1075,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.it/itm/184698998918" data-rel="3" data-found="1787218200" data-listed="0">
     <div class="photo"><img src="images/7f95a4dbd4ec.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.it/itm/184698998918" target="_blank" rel="noopener">Παλιά ακουαρέλα — ελληνικό τοπίο με σπίτι και δέντρα, υπογεγραμμένη «Δ. Χαλβατζή»</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.it/itm/184698998918" target="_blank" rel="noopener">Παλιά ακουαρέλα — ελληνικό τοπίο με σπίτι και δέντρα, υπογεγραμμένη «Δ. Χαλβατζή»</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 41.96 <small>buy now</small></p>
       <p class="meta">eBay.it &nbsp;·&nbsp; Greece &nbsp;·&nbsp; Used</p>
       <p class="notes">Soft Greek landscape watercolor (signed Δ. Χαλβατζή) — trees, low house, muted earth tones. A mood-match candidate for the lost dining-room landscape (&quot;mountains and dark cypress-like trees&quot;); compare with the magazine scan. Seller in Greece.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 20 Aug 2026, 11:30</p>
@@ -983,13 +1093,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.de/itm/117351649599" data-rel="3" data-found="1787218200" data-listed="0">
     <div class="photo"><img src="images/2f863b821c8a.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.de/itm/117351649599" target="_blank" rel="noopener">Vintage 1950s blue iris still-life oil painting, framed, 27&quot; × 23&quot;</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.de/itm/117351649599" target="_blank" rel="noopener">Vintage 1950s blue iris still-life oil painting, framed, 27&quot; × 23&quot;</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 93.20 <small>buy now</small></p>
       <p class="meta">eBay.de &nbsp;·&nbsp; United Kingdom &nbsp;·&nbsp; Used</p>
       <p class="notes">Framed 1950s oil of blue irises with golden catkin branches. The lost dining-room botanical read as irises on a LIGHT ground; this one is on a dark ground — good size and period, but check against the scan before shortlisting.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 20 Aug 2026, 11:30</p>
@@ -1004,13 +1116,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/6k7enzm/afthentiki-elliniki-chiropiiti-zografisti-kasela-gamou-teli-19ou-arches-20ou-eona.html" data-rel="4" data-found="1787090400" data-listed="1785276000">
     <div class="photo"><img src="images/13f82a65d17c.webp" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/6k7enzm/afthentiki-elliniki-chiropiiti-zografisti-kasela-gamou-teli-19ou-arches-20ou-eona.html" target="_blank" rel="noopener">Αυθεντική Ελληνική Χειροποίητη Ζωγραφιστή Κασέλα Γάμου, τέλη 19ου - αρχές 20ού αιώνα</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/6k7enzm/afthentiki-elliniki-chiropiiti-zografisti-kasela-gamou-teli-19ou-arches-20ou-eona.html" target="_blank" rel="noopener">Αυθεντική Ελληνική Χειροποίητη Ζωγραφιστή Κασέλα Γάμου, τέλη 19ου - αρχές 20ού αιώνα</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 600 <small>asking price, free delivery within Athens</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Athens &nbsp;·&nbsp; Like new (waxed, natural patina)</p>
       <p class="notes">Hand-painted walnut wedding chest, Tree of Life framed by flowering branches on a deep purple ground; original σκανταλάκι compartment, forged ironwork. 85 × 35 × 33 cm. Seller guesses &quot;probably Northern Greece&quot; — origin unconfirmed, but painted κασέλες γάμου are exactly the Mytilene type. Compare carving/painting against the owner&#x27;s photo when it arrives.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;posted 3 weeks ago&quot; from 2026-08-19 — approximate">Listed 29 Jul 2026*</span> &nbsp;·&nbsp; Found 19 Aug 2026, 00:00</p>
@@ -1020,13 +1134,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/p4p9dko/kasela-gamou-metachirismeni-me-zografisti-diakosmisi-peripou-1900.html" data-rel="4" data-found="1787090400" data-listed="1784412000">
     <div class="photo"><img src="images/44c09b4abb19.webp" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/p4p9dko/kasela-gamou-metachirismeni-me-zografisti-diakosmisi-peripou-1900.html" target="_blank" rel="noopener">Κασέλα γάμου με ζωγραφιστή διακόσμηση, περίπου 1900</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/p4p9dko/kasela-gamou-metachirismeni-me-zografisti-diakosmisi-peripou-1900.html" target="_blank" rel="noopener">Κασέλα γάμου με ζωγραφιστή διακόσμηση, περίπου 1900</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 970 <small>asking price</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Patra (Super Seller, 5.0★, 70 reviews) &nbsp;·&nbsp; Used — treated for woodworm, age-appropriate wear</p>
       <p class="notes">Painted dowry chest c. 1900 — hand-painted flowers on a green &quot;cypress&quot; ground, length 78 cm. Region not stated; strong type match for a painted island κασέλα. Reliable seller. Pricier of the two painted candidates.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;posted 1 month ago&quot; from 2026-08-19 — approximate">Listed 19 Jul 2026*</span> &nbsp;·&nbsp; Found 19 Aug 2026, 00:00</p>
@@ -1036,13 +1152,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.car.gr/xyma/view/340894839-kasela-skalisti-xeiropoiiti" data-rel="3" data-found="1787090400" data-listed="1787004000">
     <div class="photo"><img src="images/d406dd705290.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.car.gr/xyma/view/340894839-kasela-skalisti-xeiropoiiti" target="_blank" rel="noopener">Κασέλα σκαλιστή χειροποίητη — μασίφ ξύλο, 86 × 42 × 45 εκ.</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.car.gr/xyma/view/340894839-kasela-skalisti-xeiropoiiti" target="_blank" rel="noopener">Κασέλα σκαλιστή χειροποίητη — μασίφ ξύλο, 86 × 42 × 45 εκ.</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 230 <small>asking price</small></p>
       <p class="meta">Car.gr &nbsp;·&nbsp; Greece (not shown on listing)</p>
       <p class="notes">Carved (not painted) handmade solid-wood κασέλα, fresh listing. No age or region given — could be a newer decorative piece; ask the seller. Cheap enough to be worth a question either way.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Car.gr &quot;Τελευταία αλλαγή&quot; (last renewal); original post date not public">Listed 18 Aug 2026*</span> &nbsp;·&nbsp; Found 19 Aug 2026, 00:00</p>
@@ -1063,13 +1181,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/p4jxxy1/angliki-antika-karekla-grafiou-masif-xilo-karidias-chiropiito-skalisma-kafe-dermatino-kathisma.html" data-rel="4" data-found="1787176800" data-listed="1784498400">
     <div class="photo"><img src="images/b0fe0a2a0f18.webp" alt=""></div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/p4jxxy1/angliki-antika-karekla-grafiou-masif-xilo-karidias-chiropiito-skalisma-kafe-dermatino-kathisma.html" target="_blank" rel="noopener">Αγγλική αντίκα καρέκλα γραφείου — μασίφ καρυδιά, χειροποίητο σκάλισμα, δερμάτινο κάθισμα</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/p4jxxy1/angliki-antika-karekla-grafiou-masif-xilo-karidias-chiropiito-skalisma-kafe-dermatino-kathisma.html" target="_blank" rel="noopener">Αγγλική αντίκα καρέκλα γραφείου — μασίφ καρυδιά, χειροποίητο σκάλισμα, δερμάτινο κάθισμα</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 90 <small>asking price (reduced from €100)</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Ilion, Athens (pickup or Buy Now) &nbsp;·&nbsp; Like new</p>
       <p class="notes">Ticks every box for the antique-vibe desk chair: solid walnut, hand-carved back, brown leather seat — and the seller bought it from an antiques dealer in Kolonaki, the house&#x27;s own neighbourhood. Reliable seller (4.9/71). At €90, worth seeing quickly; confirm it swivels/suits the desk.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;over 1 month ago&quot; — approximate">Listed 20 Jul 2026*</span> &nbsp;·&nbsp; Found 20 Aug 2026, 00:00</p>
@@ -1084,13 +1204,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.com/itm/389569971280" data-rel="3" data-found="1788107400" data-listed="1769986800">
     <div class="photo"><img src="images/86e88a729776.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.com/itm/389569971280" target="_blank" rel="noopener">Vintage 15&quot; Red Vase Decanter Cased Glass Murano MCM Retro Italy Pitcher</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.com/itm/389569971280" target="_blank" rel="noopener">Vintage 15&quot; Red Vase Decanter Cased Glass Murano MCM Retro Italy Pitcher</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">$ 49.95 <small>buy now</small></p>
       <p class="meta">eBay.com &nbsp;·&nbsp; Farmington, MO, US &nbsp;·&nbsp; Used, no damage or chips</p>
       <p class="notes">Closest silhouette match to the kitchen jug found so far on eBay: deep uniform red throughout including the high loop handle, tall beaked spout, bulbous flared base, 38 cm tall. Unmarked, so Murano attribution is the seller&#x27;s — but the shape and colour are right, and it is cheap.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="eBay itemCreationDate via Browse API">Listed 2 Feb 2026*</span> &nbsp;·&nbsp; Found 30 Aug 2026, 18:30</p>
@@ -1105,13 +1227,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.fr/itm/377116273981" data-rel="4" data-found="1788107400" data-listed="1776204000">
     <div class="photo"><img src="images/20d7e33d1536.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.fr/itm/377116273981" target="_blank" rel="noopener">Ancienne lampe bouillotte laiton style Empire, col de cygnes, 2 feux, tôle peinte</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.fr/itm/377116273981" target="_blank" rel="noopener">Ancienne lampe bouillotte laiton style Empire, col de cygnes, 2 feux, tôle peinte</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 400 <small>buy now</small></p>
       <p class="meta">eBay.fr &nbsp;·&nbsp; Craponne, FR &nbsp;·&nbsp; not stated</p>
       <p class="notes">Empire-style brass bouillotte with swan-neck arms, painted tôle shade with gilt laurel band, arrow-key on the stem and loop finial — same silhouette as the family lamp (tall stem, decorative key above a broad shade). The family shade was pale; a shade is replaceable.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="eBay itemCreationDate via Browse API">Listed 15 Apr 2026*</span> &nbsp;·&nbsp; Found 30 Aug 2026, 18:30</p>
@@ -1121,13 +1245,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.fr/itm/137559030957" data-rel="3" data-found="1788107400" data-listed="1785189600">
     <div class="photo"><img src="images/019cbad42c05.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.fr/itm/137559030957" target="_blank" rel="noopener">Lampe bouillotte ancienne à 2 lumières, abat-jour en tôle verte</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.fr/itm/137559030957" target="_blank" rel="noopener">Lampe bouillotte ancienne à 2 lumières, abat-jour en tôle verte</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 120 <small>buy now</small></p>
       <p class="meta">eBay.fr &nbsp;·&nbsp; Léclusel, FR &nbsp;·&nbsp; very good (seller)</p>
       <p class="notes">Budget option: honest old 2-light brass bouillotte with green tôle shade, 27 cm across. Plain thumbscrew instead of the decorative key the family lamp had, and smaller — but the right type at a fifth of the price.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="eBay itemCreationDate via Browse API">Listed 28 Jul 2026*</span> &nbsp;·&nbsp; Found 30 Aug 2026, 18:30</p>
@@ -1154,13 +1280,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.co.uk/itm/168648719877" data-rel="4" data-found="1788107400" data-listed="1787954400">
     <div class="photo"><img src="images/7b382f4596e8.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.co.uk/itm/168648719877" target="_blank" rel="noopener">Antique Bentwood Rocking Chair Thonet Cane Chair</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.co.uk/itm/168648719877" target="_blank" rel="noopener">Antique Bentwood Rocking Chair Thonet Cane Chair</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">£ 375 <small>buy now</small></p>
       <p class="meta">eBay.co.uk &nbsp;·&nbsp; Nantwich, GB &nbsp;·&nbsp; Used</p>
       <p class="notes">Genuine-looking Thonet bentwood rocker with cane seat and back, 102 cm tall, 113 cm long — the classic form most Greek houses of the era had. Listed yesterday; UK seller ships. Confirm the family rocker&#x27;s form before buying.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="eBay itemCreationDate via Browse API">Listed 29 Aug 2026*</span> &nbsp;·&nbsp; Found 30 Aug 2026, 18:30</p>
@@ -1170,13 +1298,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://www.ebay.com/itm/278232225179" data-rel="3" data-found="1788107400" data-listed="1785362400">
     <div class="photo"><img src="images/1e83340f2c15.jpg" alt=""></div>
     <div class="body">
-      <h3><a href="https://www.ebay.com/itm/278232225179" target="_blank" rel="noopener">Original Signed THONET Bentwood Cane Rocking Chair Antique Vienna Rocker</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://www.ebay.com/itm/278232225179" target="_blank" rel="noopener">Original Signed THONET Bentwood Cane Rocking Chair Antique Vienna Rocker</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">$ 400 <small>buy now</small></p>
       <p class="meta">eBay.com &nbsp;·&nbsp; Covington, GA, US &nbsp;·&nbsp; Used</p>
       <p class="notes">Signed original Thonet in excellent condition — the better piece of the two rockers found this round, but shipping a chair from Georgia, US to Greece will be costly. Prefer the UK one unless provenance matters.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="eBay itemCreationDate via Browse API">Listed 30 Jul 2026*</span> &nbsp;·&nbsp; Found 30 Aug 2026, 18:30</p>
@@ -1191,13 +1321,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/opxe4o/palio-paradosiako-sigkouni-metachirismeno-me-liges-fthores.html" data-rel="4" data-found="1787176800" data-listed="1784498400">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/opxe4o/palio-paradosiako-sigkouni-metachirismeno-me-liges-fthores.html" target="_blank" rel="noopener">Παλιό παραδοσιακό σιγκούνι, μεταχειρισμένο με λίγες φθορές</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/opxe4o/palio-paradosiako-sigkouni-metachirismeno-me-liges-fthores.html" target="_blank" rel="noopener">Παλιό παραδοσιακό σιγκούνι, μεταχειρισμένο με λίγες φθορές</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 120 <small>asking price</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Thrakomakedones, Attica (ships via courier) &nbsp;·&nbsp; Used, minor wear</p>
       <p class="notes">Genuine old sigouni in folk-art category, 11 photos on the listing, top-rated seller (5.0/57). Region not stated — ask whether it is Epirote/Pogoni and compare the trim with the magazine detail photo. Same village as the manouali seller, oddly enough.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates"><span title="Vendora shows &quot;over 1 month ago&quot; — approximate">Listed 20 Jul 2026*</span> &nbsp;·&nbsp; Found 20 Aug 2026, 00:00</p>
@@ -1207,13 +1339,15 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <article class="card" data-key="https://vendora.gr/items/zje5py3/paradosiaki-zagorisia-foresia-san-kenourgio-me-vitrina.html" data-rel="3" data-found="1787176800" data-listed="0">
     <div class="photo">no photo</div>
     <div class="body">
-      <h3><a href="https://vendora.gr/items/zje5py3/paradosiaki-zagorisia-foresia-san-kenourgio-me-vitrina.html" target="_blank" rel="noopener">Παραδοσιακή Ζαγορίσια φορεσιά, σαν καινούργια, με βιτρίνα</a><span class="tag candidate">Candidate</span></h3>
+      <h3><a href="https://vendora.gr/items/zje5py3/paradosiaki-zagorisia-foresia-san-kenourgio-me-vitrina.html" target="_blank" rel="noopener">Παραδοσιακή Ζαγορίσια φορεσιά, σαν καινούργια, με βιτρίνα</a><span class="tag candidate">Candidate</span><span class="tag mine" hidden></span></h3>
       <p class="price">€ 3,200 <small>asking price</small></p>
       <p class="meta">Vendora &nbsp;·&nbsp; Greece &nbsp;·&nbsp; Like new</p>
       <p class="notes">Complete traditional costume from Zagori (Epirus, neighbouring Pogoni) in a display case — more than the single sigouni coat, and priced accordingly. Relevant if the family wants a full display ensemble like the magazine&#x27;s.
 </p>
       <div class="actions">
         <button type="button" class="like">&#9825; Like</button>
+        <button type="button" class="buy">Bought</button>
+        <button type="button" class="prog">In process</button>
         <button type="button" class="del">&#215; Remove</button>
       </div>
       <p class="dates">Found 20 Aug 2026, 00:00</p>
@@ -1227,7 +1361,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
 <p class="none">No listings found yet — searches running.</p>
 </section>
 <footer>Listings link to the original marketplaces; prices and availability change there, not here.
-Likes and removals are saved in this browser only.</footer>
+Likes, removals and bought / in-process marks are saved in this browser only.</footer>
 </div>
 <script>
 (function () {
@@ -1240,6 +1374,8 @@ Likes and removals are saved in this browser only.</footer>
 
   var likes = new Set(load('lhf-likes', []));
   var removed = new Set(load('lhf-removed', []));
+  var bought = new Set(load('lhf-bought', []));
+  var inproc = new Set(load('lhf-inproc', []));
   var sortMode = load('lhf-sort', 'relevant');
   var showRemoved = false;
 
@@ -1252,6 +1388,17 @@ Likes and removals are saved in this browser only.</footer>
     var liked = likes.has(key);
     likeBtn.classList.toggle('on', liked);
     likeBtn.innerHTML = liked ? '&#9829; Liked' : '&#9825; Like';
+    var buyBtn = card.querySelector('.actions .buy');
+    var progBtn = card.querySelector('.actions .prog');
+    buyBtn.classList.toggle('on', bought.has(key));
+    buyBtn.innerHTML = bought.has(key) ? '&#10003; Bought' : 'Bought';
+    progBtn.classList.toggle('on', inproc.has(key));
+    progBtn.innerHTML = inproc.has(key) ? '&#8943; In process' : 'In process';
+    var flag = card.querySelector('.tag.mine');
+    flag.className = 'tag mine' +
+      (bought.has(key) ? ' mine-bought' : inproc.has(key) ? ' mine-inproc' : '');
+    flag.textContent = bought.has(key) ? 'Bought' : inproc.has(key) ? 'In process' : '';
+    flag.hidden = !bought.has(key) && !inproc.has(key);
     var gone = removed.has(key);
     card.classList.toggle('gone', gone);
     delBtn.innerHTML = gone ? '&#8634; Restore' : '&#215; Remove';
@@ -1312,6 +1459,20 @@ Likes and removals are saved in this browser only.</footer>
     card.querySelector('.actions .like').addEventListener('click', function () {
       likes.has(key) ? likes.delete(key) : likes.add(key);
       save('lhf-likes', Array.from(likes));
+      apply();
+    });
+    card.querySelector('.actions .buy').addEventListener('click', function () {
+      if (bought.has(key)) { bought.delete(key); }
+      else { bought.add(key); inproc.delete(key); }
+      save('lhf-bought', Array.from(bought));
+      save('lhf-inproc', Array.from(inproc));
+      apply();
+    });
+    card.querySelector('.actions .prog').addEventListener('click', function () {
+      if (inproc.has(key)) { inproc.delete(key); }
+      else { inproc.add(key); bought.delete(key); }
+      save('lhf-bought', Array.from(bought));
+      save('lhf-inproc', Array.from(inproc));
       apply();
     });
     card.querySelector('.actions .del').addEventListener('click', function () {
