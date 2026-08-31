@@ -65,6 +65,20 @@ footer { margin-top: 60px; border-top: 1px solid #ddd; padding-top: 14px;
 .actions button.del:hover { border-color: #111; color: #111; }
 .card.gone { display: none; }
 body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; }
+section.item { scroll-margin-top: 14px; }
+.menu { position: fixed; top: 12px; right: 12px; z-index: 20; font-family: Arial, Helvetica, sans-serif; }
+.menu-btn { width: 42px; height: 38px; background: #fff; border: 1px solid #111; cursor: pointer;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            gap: 5px; padding: 0; }
+.menu-btn span { display: block; width: 18px; height: 2px; background: #111; }
+.menu-drop { position: absolute; right: 0; top: 44px; background: #fff; border: 1px solid #111;
+             min-width: 250px; max-width: 320px; max-height: 72vh; overflow-y: auto;
+             box-shadow: 4px 4px 0 rgba(0,0,0,.12); }
+.menu-drop a { display: block; padding: 9px 14px; color: #111; text-decoration: none;
+               font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+               border-bottom: 1px solid #eee; }
+.menu-drop a:last-child { border-bottom: none; }
+.menu-drop a:hover { background: #111; color: #fff; }
 @media (max-width: 640px) {
   .card { flex-direction: column; }
   .card .photo { width: 100%; height: 200px; }
@@ -73,12 +87,18 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
 </style>
 </head>
 <body>
+<div class="menu">
+  <button type="button" id="menu-btn" class="menu-btn" aria-label="Jump to section"><span></span><span></span><span></span></button>
+  <nav id="menu-drop" class="menu-drop" hidden>
+<a href="#sect-stavros-neonakis-pieces">Stavros Neonakis — any piece</a><a href="#sect-greek-classical-walnut">Greek classical walnut (same school/era)</a><a href="#sect-klismos-side-chairs">Klismos-style side chairs (set) — Neonakis</a><a href="#sect-kline-daybed">Classical daybed / kline settee — Neonakis</a><a href="#sect-frederica-green-floral-carpet">Giant green floral carpet — Queen Frederica school</a><a href="#sect-frederica-school-carpets">Queen Frederica school carpets — any</a><a href="#sect-hoof-foot-coffee-table">Round two-tier coffee table, hoof feet — Neonakis</a><a href="#sect-manouali-floor-candelabrum">Μανουάλι — large church-style floor candelabrum</a><a href="#sect-giltwood-pier-mirror">Tall giltwood mirror with carved crest</a><a href="#sect-gudrun-von-leitner-aquarelle">Flower aquarelle — Gudrun von Leitner(z)</a><a href="#sect-house-wall-paintings">Wall paintings from the magazine photos — landscape, iris, figure sketch</a><a href="#sect-mytilene-kasela">Μυτιληνιά κασέλα — carved dowry chest from Lesbos</a><a href="#sect-takis-frangoudes-paintings">Takis Frangoudes (Τάκης Φραγκούδης) — any painting</a><a href="#sect-neonakis-style-desk-chair">Desk/office chair — antique wooden, Neonakis-school style</a><a href="#sect-murano-red-jug">Red Murano crystal jug (κόκκινη κανάτα Murano)</a><a href="#sect-bouillotte-lamp">Brass bouillotte table lamp with shade</a><a href="#sect-round-pedestal-table">Classic round pedestal table (the &quot;silver table&quot;)</a><a href="#sect-family-secretaire">Old family secretaire (παλιό οικογενειακό σεκρετέρ)</a><a href="#sect-rocking-armchair">Rocking armchair (κουνιστή πολυθρόνα)</a><a href="#sect-pogoni-sigouni">Pogoni sigouni — traditional coat with coin jewellery</a><a href="#sect-libyan-silver-objects">Old silver objects from Libya (tray, boxes, vessels)</a>
+  </nav>
+</div>
 <div class="wrap">
 <header>
   <h1>The Lost House</h1>
   <p class="sub">Register of antique replacements sought for a neoclassical home lost to fire</p>
 </header>
-<p class="summary">21 items sought &nbsp;·&nbsp; 65 listings on file &nbsp;·&nbsp; updated 30 Aug 2026, 21:19</p>
+<p class="summary">21 items sought &nbsp;·&nbsp; 65 listings on file &nbsp;·&nbsp; updated 31 Aug 2026, 11:43</p>
 <div class="toolbar">
   <span class="lbl">Sort:</span>
   <button type="button" data-sort="relevant">Most relevant</button>
@@ -88,7 +108,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
   <button type="button" id="toggle-hidden">Show removed (<span id="hidden-count">0</span>)</button>
 </div>
 
-<section class="item">
+<section class="item" id="sect-stavros-neonakis-pieces">
   <h2>Stavros Neonakis — any piece</h2>
   <p class="item-meta">Greek neoclassical / ancient Greek revival &nbsp;·&nbsp; 1970s-2000s &nbsp;·&nbsp; any &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Any furniture by Stavros Neonakis of Athens (klismos chairs, klismos stools, diphros stools, tripod tables, bronze fixtures). Maker labels may read &quot;ΣΤΑΥΡΟΣ ΝΕΟΝΑΚΗΣ&quot; or &quot;Neonakis Athens&quot;.</p>
@@ -147,7 +167,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-greek-classical-walnut">
   <h2>Greek classical walnut (same school/era)</h2>
   <p class="item-meta">Greek classical / neoclassical, carved solid walnut &nbsp;·&nbsp; 1950s-1980s &nbsp;·&nbsp; any &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Pieces matching the Neonakis era and style when no attributed piece is available: Saridis of Athens (T.H. Robsjohn-Gibbings designs), and quality unattributed handmade carved walnut dining sets and case furniture from Greek workshops.</p>
@@ -310,7 +330,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-klismos-side-chairs">
   <h2>Klismos-style side chairs (set) — Neonakis</h2>
   <p class="item-meta">Greek classical, klismos / gondola back, after ancient Greek prototypes &nbsp;·&nbsp; 1980s-1990s, made by Stavros Neonakis, Athens (per owner) &nbsp;·&nbsp; living room &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Side chairs with sabre legs, rounded scroll/gondola backs and pale cream seats, as seen throughout the living room in the magazine photos. At least 3-4 visible.</p>
@@ -456,7 +476,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-kline-daybed">
   <h2>Classical daybed / kline settee — Neonakis</h2>
   <p class="item-meta">Greek classical kline / neoclassical daybed, after ancient Greek prototypes &nbsp;·&nbsp; 1980s-1990s, made by Stavros Neonakis, Athens (per owner) &nbsp;·&nbsp; living room &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Bench-form daybed with dark wood frame, column-turned elements and long cream cushion with tapestry pillows, along the living-room wall under the gilt mirror.</p>
@@ -497,7 +517,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-frederica-green-floral-carpet">
   <h2>Giant green floral carpet — Queen Frederica school</h2>
   <p class="item-meta">Greek handwoven, allover floral field (&quot;a green meadow full of flowers&quot;) &nbsp;·&nbsp; 1950s-1960s or earlier — pre-1970 ONLY (1970s+ is too new, per owner 2026-08-18) &nbsp;·&nbsp; living room &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Gigantic room-size carpet, green ground densely covered with flowers, covering nearly the whole living-room floor in the magazine photos (print colour cast makes it look warm/red, but per the family it is green). Made at the crafts school founded by Queen Frederica in Northwestern Greece; the family also used it in a previous large house. School designs, not commercial patterns.</p>
@@ -574,7 +594,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-frederica-school-carpets">
   <h2>Queen Frederica school carpets — any</h2>
   <p class="item-meta">Greek handwoven, Royal Welfare Fund workshop designs &nbsp;·&nbsp; 1950s-1960s (school active from late 1940s) — pre-1970 ONLY, per owner 2026-08-18 &nbsp;·&nbsp; any &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Standing search for any carpet from the Queen Frederica / Royal Welfare Fund (Βασιλική Πρόνοια) craft schools of Northwestern Greece — the family had several, all woven with their own sheep&#x27;s wool to the schools&#x27; own designs.</p>
@@ -723,7 +743,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-hoof-foot-coffee-table">
   <h2>Round two-tier coffee table, hoof feet — Neonakis</h2>
   <p class="item-meta">neoclassical, after ancient Greek prototypes &nbsp;·&nbsp; 1980s-1990s, made by Stavros Neonakis, Athens (per owner) &nbsp;·&nbsp; living room &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Large round coffee table with two levels (wooden lower shelf, glass top) and animal/hoof feet, centre of the living room in the magazine photos.</p>
@@ -764,7 +784,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-manouali-floor-candelabrum">
   <h2>Μανουάλι — large church-style floor candelabrum</h2>
   <p class="item-meta">Greek Orthodox church manouali, used domestically as a floor candelabrum &nbsp;·&nbsp; 19th - mid 20th century &nbsp;·&nbsp; living room &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Very large standing candle holder at the far left of the living-room magazine photo, in front of the gilt mirror: a manouali (μανουάλι), the Greek Orthodox church floor candelabrum. Tall turned baluster column on a base, crowned by one or two circular tiers ringed with many small turned candle sockets — photographed fully lit with dozens of slim candles. The bottom-left detail photo on the captions page shows the tiers and sockets up close; the caption confirms it by name (&quot;ΛΕΠΤΟΜΕΡΕΙΑ ΑΠΟ ΤΟ ΠΩΓΩΝΙΣΙΟ ΣΙΓΚΟΥΝΙ ΚΑΙ ΤΟ ΜΑΝΟΥΑΛΙ&quot;).</p>
@@ -805,7 +825,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-giltwood-pier-mirror">
   <h2>Tall giltwood mirror with carved crest</h2>
   <p class="item-meta">neoclassical / Louis-Philippe-to-Victorian giltwood, arched with ornate cresting &nbsp;·&nbsp; 19th - early 20th century &nbsp;·&nbsp; living room &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Tall wall mirror hanging above the kline daybed at the left of the living-room photo: narrow arched (round-top) plate in a carved giltwood frame that rises to an elaborate openwork carved crest/finial at the top. Warm gold tone; reads as a classic pier mirror. Partly obscured in the photo by the lit manouali in front of it.</p>
@@ -864,7 +884,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-gudrun-von-leitner-aquarelle">
   <h2>Flower aquarelle — Gudrun von Leitner(z)</h2>
   <p class="item-meta">watercolor still life of flowers (tulips), loose modern hand &nbsp;·&nbsp; 20th century (photographed in the house early 1990s) &nbsp;·&nbsp; living room &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Framed watercolor of tulips/flowers on the living-room wall above the round table (light frame, pale mat, pink-red tulips on long stems). The magazine caption credits it: &quot;Η ΑΚΟΥΑΡΕΛΑ ΕΙΝΑΙ ΤΗΣ GUDRUN VON LEITNEZ&quot; — almost certainly Gudrun von Leitner (spelling per caption may be garbled). A second flower picture — roses with a bird, Japanese in feeling — hangs in the bedroom photo and may be by the same hand.</p>
@@ -1013,7 +1033,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-house-wall-paintings">
   <h2>Wall paintings from the magazine photos — landscape, iris, figure sketch</h2>
   <p class="item-meta">framed works on paper — watercolors and a drawing &nbsp;·&nbsp; 20th century &nbsp;·&nbsp; various &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">The other framed artworks visible in the magazine scans, artists not named in the captions. (1) Dining room, left wall: watercolor landscape — mountains and dark cypress-like trees, Greek in feeling — in a pale silver/grey frame with a wide mat. (2) Dining room, right wall: taller dark botanical painting, reads as irises on a light ground. (3) Bedroom/study with the pink sofa: framed figure drawing or sketch (single standing figure, loose dark strokes) above the sofa. Exact identification needs the family&#x27;s memory of the artists.</p>
@@ -1108,7 +1128,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-mytilene-kasela">
   <h2>Μυτιληνιά κασέλα — carved dowry chest from Lesbos</h2>
   <p class="item-meta">Greek island folk, Mytilene/Lesbos dowry chest (κασέλα προίκας) &nbsp;·&nbsp; 19th - early 20th century &nbsp;·&nbsp; unknown (photo pending) &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Traditional dowry chest (κασέλα/σεντούκι) from Mytilene, Lesbos: rectangular lidded chest on a plinth or short feet, the front panel carved in the island manner — rosettes, cypress trees, vases of flowers, birds — sometimes with small drawers in the base and traces of original paint. Exact carving pattern, colour and size to be confirmed from the owner&#x27;s photo when uploaded.</p>
@@ -1167,13 +1187,13 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-takis-frangoudes-paintings">
   <h2>Takis Frangoudes (Τάκης Φραγκούδης) — any painting</h2>
   <p class="item-meta">Greek academic-to-modern painting, pupil of Georgios Jakovides &nbsp;·&nbsp; active ~1920s-1970s &nbsp;·&nbsp; any &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Standing search for any work by Takis Frangoudes: born Limassol, Cyprus 1900; studied in Athens under Georgios Jakovides; settled in Athens 1928; one-man Athens exhibitions 1951, 1955, 1958, 1960, 1964, 1972; died Athens 1978. Signatures may read &quot;Τ. Φραγκούδης&quot;, &quot;ΦΡΑΓΚΟΥΔΗΣ&quot;, &quot;T. Frangoudes&quot; or &quot;Frangoudis&quot;. The family owned his paintings (lost in the fire).</p>
 <p class="none">No listings found yet — searches running.</p>
 </section>
-<section class="item">
+<section class="item" id="sect-neonakis-style-desk-chair">
   <h2>Desk/office chair — antique wooden, Neonakis-school style</h2>
   <p class="item-meta">Greek classical / neoclassical walnut desk chair (klismos or captain&#x27;s form) &nbsp;·&nbsp; antique or 1950s-1990s Greek workshop &nbsp;·&nbsp; study &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">A desk chair to pair with the old wooden Neonakis-school desk: same dark carved-walnut antique character as the klismos chairs and daybed — curved gondola/klismos back or classic captain&#x27;s/bergère desk form. An antique wooden swivel desk chair is acceptable if the wood and lines match. NOT a modern office chair, and per owner (2026-08-20) no more regular side chairs.</p>
@@ -1196,7 +1216,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-murano-red-jug">
   <h2>Red Murano crystal jug (κόκκινη κανάτα Murano)</h2>
   <p class="item-meta">Murano crystal/glass pitcher, deep red, curved handle, flared spout &nbsp;·&nbsp; mid 20th century or earlier (&quot;old&quot; per the magazine caption) &nbsp;·&nbsp; kitchen (photographed by the kitchen curtain) &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Old red jug of Murano crystal, photographed in close-up in front of the kitchen&#x27;s handmade lace curtain: deep ruby red, bulbous body, tall pinched spout and a high curved handle. Caption: &quot;ΜΙΑ ΠΑΛΙΑ ΚΟΚΚΙΝΗ ΚΑΝΑΤΑ ΑΠΟ ΚΡΥΣΤΑΛΛΟ MURANO&quot;.</p>
@@ -1219,7 +1239,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-bouillotte-lamp">
   <h2>Brass bouillotte table lamp with shade</h2>
   <p class="item-meta">French bouillotte lamp — brass candelabra base, adjustable shade on stem &nbsp;·&nbsp; 19th - mid 20th century &nbsp;·&nbsp; living room &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Table lamp visible twice in the scans (on the round table under the tulip aquarelle, and on the table with the Libyan silver): brass bouillotte form with candle-arm base, central stem rising through a broad conical shade with a decorative key/finial at the top.</p>
@@ -1260,19 +1280,19 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-round-pedestal-table">
   <h2>Classic round pedestal table (the &quot;silver table&quot;)</h2>
   <p class="item-meta">classical round side/centre table, single pedestal on splayed feet &nbsp;·&nbsp; 19th - mid 20th century &nbsp;·&nbsp; living room &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">&quot;Ένα κλασσικό στρογγυλό τραπέζι&quot; per the caption — round dark-wood table on a central pedestal, photographed dressed with the old silver objects from Libya, the bouillotte lamp and the hammered vase, at the left of the living room by the window.</p>
 <p class="none">No listings found yet — searches running.</p>
 </section>
-<section class="item">
+<section class="item" id="sect-family-secretaire">
   <h2>Old family secretaire (παλιό οικογενειακό σεκρετέρ)</h2>
   <p class="item-meta">fall-front or slant-front secretaire, old family piece &nbsp;·&nbsp; 19th - early 20th century &nbsp;·&nbsp; bedroom &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">The magazine caption places &quot;ΤΟ ΠΑΛΙΟ ΟΙΚΟΓΕΝΕΙΑΚΟ ΣΕΚΡΕΤΑΙΡ&quot; in the bedroom with the rocking armchair. Not clearly visible in the scans we have — form (fall-front vs bureau) and wood need the family&#x27;s memory or another photo.</p>
 <p class="none">No listings found yet — searches running.</p>
 </section>
-<section class="item">
+<section class="item" id="sect-rocking-armchair">
   <h2>Rocking armchair (κουνιστή πολυθρόνα)</h2>
   <p class="item-meta">old rocking armchair — bentwood (Thonet-type) or caned, per the era of the house &nbsp;·&nbsp; late 19th - mid 20th century &nbsp;·&nbsp; bedroom &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">The bedroom&#x27;s rocking armchair, named in the caption alongside the family secretaire (&quot;ΤΗΝ ΚΟΥΝΙΣΤΗ ΠΟΛΥΘΡΟΝΑ&quot;). Not clearly visible in the scans — most Greek houses of this era had bentwood Thonet-style rockers; confirm form with the family.</p>
@@ -1313,7 +1333,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-pogoni-sigouni">
   <h2>Pogoni sigouni — traditional coat with coin jewellery</h2>
   <p class="item-meta">Epirus (Pogoni) folk costume — sleeveless white wool sigouni with black felt trim &nbsp;·&nbsp; 19th - early 20th century &nbsp;·&nbsp; displayed in the living room &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">Traditional sigouni (sleeveless overcoat) from Pogoni, Epirus, displayed on a stand with silver coin necklaces (γιορντάνια), per the detail photo and caption &quot;ΤΟ ΠΩΓΩΝΙΣΙΟ ΣΙΓΚΟΥΝΙ&quot;. White wool body, dark trim at the collar and front edges, embroidered borders.</p>
@@ -1354,7 +1374,7 @@ body.show-hidden .card.gone { display: flex; opacity: .5; border-style: dashed; 
     </div>
   </article>
 </section>
-<section class="item">
+<section class="item" id="sect-libyan-silver-objects">
   <h2>Old silver objects from Libya (tray, boxes, vessels)</h2>
   <p class="item-meta">North African / Ottoman-Libyan silver — hammered and engraved trays, lidded boxes, censers &nbsp;·&nbsp; 19th - early 20th century &nbsp;·&nbsp; living room (dressed the round pedestal table) &nbsp;·&nbsp; status: searching</p>
   <p class="item-desc">The round table was dressed with &quot;ΠΑΛΙΑ ΑΣΗΜΕΝΙΑ ΑΝΤΙΚΕΙΜΕΝΑ ΑΠΟ ΤΗ ΛΙΒΥΗ&quot; — old Libyan silver: visible in the close-up are an engraved lidded box/ censer, napkin-ring-like bands, cuffs/bracelets and small vessels on an embroidered runner, plus a large hammered vase.</p>
@@ -1409,7 +1429,7 @@ Likes, removals and bought / in-process marks are saved in this browser only.</f
     var rel = parseInt(card.getAttribute('data-rel'), 10) || 0;
     var found = parseInt(card.getAttribute('data-found'), 10) || 0;
     var listed = parseInt(card.getAttribute('data-listed'), 10) || 0;
-    if (sortMode === 'newest') return [listed || found, rel];
+    if (sortMode === 'newest') return [found || listed, rel];
     if (sortMode === 'liked') return [likes.has(key) ? 1 : 0, rel, found];
     return [rel, found];
   }
@@ -1493,6 +1513,27 @@ Likes, removals and bought / in-process marks are saved in this browser only.</f
     showRemoved = !showRemoved;
     apply();
   });
+
+  var menuBtn = document.getElementById('menu-btn');
+  var menuDrop = document.getElementById('menu-drop');
+  if (menuBtn && menuDrop) {
+    menuBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      menuDrop.hidden = !menuDrop.hidden;
+    });
+    document.addEventListener('click', function (e) {
+      if (!menuDrop.hidden && !menuDrop.contains(e.target)) menuDrop.hidden = true;
+    });
+    menuDrop.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        menuDrop.hidden = true;
+        // Sections move around when sorted, so resolve the anchor at click time.
+        var target = document.getElementById(a.getAttribute('href').slice(1));
+        if (target) target.scrollIntoView({ block: 'start' });
+      });
+    });
+  }
 
   apply();
 })();
